@@ -16,6 +16,7 @@ function createPanier() {
 		var tblBody = document.createElement("tbody");
 		var tblTotal = document.createElement("ttotal")
 		let inith = ['Produits', 'Prix/pc', 'Qté', 'Total', 'Retirer'];
+		let initt = ['TOTAL','0','€']
 
 		// creating all cells
 		for (var i = 0; i < 1; i++) {
@@ -32,15 +33,14 @@ function createPanier() {
 				cell.appendChild(cellText);
 				row.appendChild(cell);
 			}
-			for (var k = 0; k < 3; k++) {
+			for (var k = 0; k < initt.length; k++) {
 				var celtot = document.createElement("td");
-				var totTx = document.getElementById("totalPanier").getElementsByTagName("td")[k]
+				var totTx = document.createTextNode(initt[k])
 
+				celtot.appendChild(totTx);
 				row2.appendChild(celtot);
 			}
-			var totCell = document.getElementById("totalPanier").getElementsByTagName("td")[0];
-			var totTx = document.getElementById("totalPanier").getElementsByTagName("td")[0].createTextNode("TOTAL");
-			totCell.appendChild(totTx);
+			
 
 
 			// add the row to the end of the table body
@@ -57,6 +57,7 @@ function createPanier() {
 		tbl.setAttribute("id", "tbPanier");
 		tblBody.setAttribute("id", "bodyPanier");
 		tblTotal.setAttribute("id","totalPanier");
+		
 	}
 }
 
@@ -75,11 +76,12 @@ function goPanier(idForm) {
 	nomProd = idProd.getElementsByClassName("nomProd")[0].innerHTML;
 	prixProd = idProd.getElementsByClassName("prixProd")[0].innerHTML;
 	qttProd = idProd.getElementsByClassName("legPanier")[0].elements[0].value;
-	totalProd = prixProd * qttProd + " €"
+	totalProd = prixProd * qttProd;
 	txtCom = [nomProd, prixProd, qttProd, totalProd, '-'];
 
 	// récupère éléments du tableau
 	var tblPanier = document.getElementById("tbPanier");
+	
 
 
 
@@ -109,12 +111,14 @@ function goPanier(idForm) {
 			var cellText = document.createTextNode(txtCom[j]);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
+			
 		}
 		
 
 		// add the row to the end of the table body
 		tblBody.appendChild(row);
-		trTotal.getElementsByTagName('td')[1] += prixProd * qttProd;
+		
+		trTotal.rows[0].cells[1].innerHTML = totalProd;
 	}
 }
 };
