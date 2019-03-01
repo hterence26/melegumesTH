@@ -1625,15 +1625,52 @@ article li{
         padding-bottom: 12px;
         background-color: #0fa3a3;
         color: white;
-      }
-      #totalPanier td {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        background-color: #EB8522;
-        color: white;
-        border-bottom: none;
+}
+
+#totalPanier td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #EB8522;
+    color: white;
+    border-bottom: none;
     
-          }
+}
+
+
+
+
+
+/* --------------------------- page 404 ----------------- */
+
+.error{
+    margin:200px auto 0;
+    text-align:center;
+}
+
+.error h1{
+    font-size:3em;
+}
+
+.error p{
+    color:#005454;
+    font-size:1.2em;
+}
+
+.error a{
+    font-weight:bold;
+    text-decoration:none;
+    color:#0fa3a3;
+}
+
+.error a:hover{
+    color:#E69237;
+}
+
+#orgaFooter.footer404{
+    margin:350px auto 0;
+}
+
+
 
 
 
