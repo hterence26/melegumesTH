@@ -8,7 +8,7 @@ const friends = [
       id: 1,
       name: 'MEL ÉGUMES',
       adresse: 'Chemin de la Joyeuse entrée',
-      n: 23,
+      n: 13,
       cp: 7020,
       ville: 'Nimy',
       pays: 'belgique',
@@ -89,7 +89,7 @@ const friends = [
 
       {
         id: 1,
-        markup: `<li class="fName" onclick="generateFriendDetails(${data.id})"><img src="images/${data.photo}" alt="Placeholder image"</br>
+        markup: `<li class="fName" onmouseover="generateFriendDetails(${data.id})"><img src="images/${data.photo}" alt="Placeholder image"</br>
         <strong>${data.name}</strong></br>
   
         <strong>${data.ville}
@@ -144,7 +144,7 @@ const friends = [
   const generateFriendDetails = friendId => {
     const currentFriend = friends.find(friend => friend.id === friendId);
     qs('#friend_detail').innerHTML = renderMarkup(10, currentFriend);
-    generatePassionsTags(currentFriend.passions);
+    // generatePassionsTags(currentFriend.passions);
   };
   
   
