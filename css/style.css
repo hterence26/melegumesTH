@@ -318,6 +318,10 @@ footer p{
     margin: auto;
 }
 
+.legalLink{
+    color:#E69237;
+}
+
 .textLink{
     text-decoration:none;
     color:#005454;
@@ -1661,6 +1665,31 @@ article li{
 #orgaFooter.footer404{
     margin:350px auto 0;
 }
+
+
+
+
+
+
+
+/* --------------------- Politique de confidentialité ----------------------- */
+
+.legal p{
+    font-size:0.8em;
+}
+
+.legal h6{
+    font-family: 'Amatic SC', cursive;
+    font-size:1.3em;
+    margin:40px 0 10px;;
+}
+
+.sousLegal{
+    margin-left:5%;
+}
+
+
+
 
 
 
