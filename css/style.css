@@ -1332,7 +1332,7 @@ article li{
     resize:none;
 }
 
-#formulaire button{
+#formulaire button, .commandForm button{
     background-color: transparent;
     border:none;
     margin-top:-20px;
@@ -1382,9 +1382,9 @@ article li{
 
 }
   
-    .texteBtn:active{
-      top:-1.7em;
-    }
+.texteBtn:active{
+    top:-1.7em;
+}
 
 
 .contactPostIt{

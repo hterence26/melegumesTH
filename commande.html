@@ -684,8 +684,7 @@
             </div>
         </section>
 <section>
-        <form name="comPanier" method="post"
-                  >
+        <form name="comPanier" method="post" class="commandForm">
                   <p>
                     <h3>Coordonnées</h3>
                     Nom : <input type="text" name="nom" onblur="verifName()" />
@@ -711,27 +710,11 @@
                       <option value="date3">samedi de 10h à 14h</option>
                     </select>
                   </p>
-            
-              
-<!--<h3>Récapitulatif</h3>
-
-        
-        <input type="text" name="mailData" value=mailData>
-        
-        <input type="text" name="nameData" value=nameData>
-        
-        <input type="text" name="telData" value=telData>
-        
-        <input type="text" name="depotData" value=depotData>
-        <br><br>
-        <button>
-        Send
-        </button>
-       
-   -->     
-        <div class="btn">
-            <input class="btn__link formBtn" type="button"  value="Commander" name="dsubmit" onclick="getCommande();" />
-        </div>
+             
+    <div class="btn">
+        <!-- <input class="btn__link formBtn" type="button"  value="" name="dsubmit" onclick="getCommande();" /> -->
+        <a class="btn__link formBtn" type="button" name="dsubmit" onclick="getCommande();"><span class="texteBtn">Commander</span></a>
+    </div>
 </form>
 
     </section>
