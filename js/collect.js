@@ -12,7 +12,7 @@ const friends = [
       cp: 7020,
       ville: 'Nimy',
       pays: 'belgique',
-      map:'https://www.google.com/maps/place/Avenue+de+la+Joyeuse+Entr%C3%A9e+13,+7000+Mons/@50.4709586,3.9550874,17z/data=!4m5!3m4!1s0x47c24fdf5d798f0f:0x38bb990cdb3b3f7e!8m2!3d50.4710244!4d3.955657',
+      map:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.396675654272!2d3.955087424231859!3d50.47095859858905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c24fdf5d798f0f%3A0x38bb990cdb3b3f7e!2sAvenue+de+la+Joyeuse+Entr%C3%A9e+13%2C+7000+Mons!5e0!3m2!1sfr!2sbe!4v1551445627729',
      photo: '../image/logomelegumes.png',
      email:'melanie-depaul@hotmail.com',
      horaires:'Du lundi au vendredi: ',
