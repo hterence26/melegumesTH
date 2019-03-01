@@ -1,0 +1,2672 @@
+/* Partie commune à toutes les pages */
+
+html{
+    box-sizing:border-box;
+    font-size:20px; /* 1em = 20px */
+    line-height:30px;
+    font-family:'Raleway', sans-serif;
+    color: #005454;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:7em 0 0 0;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    z-index:5000;
+    background-color: white;
+}
+
+svg{
+    padding-top:5px;
+    height:6em;
+    transition: 0.3s ease;
+}
+
+header .st0{fill:#057B3B;}
+header .st1{fill:#137C3E;}
+header .st2{fill:#E69237;}
+header .st3{fill:#B7CE3C;}
+header .st4{fill:#48A035;}
+
+nav{
+    width:75%;
+    height:7em;
+    display:flex;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+
+
+header > div{ /* Biseau du Header */
+    content:"";
+    position:fixed;
+    top:0;
+    left:200px;
+    width:100%;
+    border-style:solid;
+    border-color:transparent transparent #0fa3a3 transparent;
+    border-width:0px 0px 7em 50px;
+    transition: 0.3s ease;
+  }
+
+.menuNavigation {
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    font-family: 'Amatic SC', cursive;
+    font-weight:bold;
+    width:95%;
+    z-index:1000;
+    font-size:1.3em;
+    margin:8px 0 0;
+}
+
+.menuNavigation>li>a{
+    text-decoration:none;
+    color:white;
+    transition:all .3s ease;
+}
+
+.menuNavigation>li>a:hover, #toggleButton i:hover{
+    color:#fae3a3;
+}
+
+#page-active>a{
+    color:#fae3a3;
+}
+
+#orderNow{
+    text-align:center;
+    padding:10px 30px;
+    background-color: #E69237;
+    border-radius:5px;
+    margin:3px;
+}
+
+#orderNow:hover{
+    color:black;
+    margin:0;
+    padding:13px 33px;
+}
+
+#orderNowMobile{
+    display:none;
+}
+
+.sousnav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:5.2em;
+    display:flex;
+    height:2em;
+    justify-content: space-around;
+    align-content:center;
+    background-color: #70c7c7;
+    list-style: none;
+    padding:0 25vw;
+    transition:all .3s ease;
+}
+
+.sousnav li{
+    display:flex;
+    text-align:center;
+    font-family: 'Coming Soon', cursive;
+    font-size:0.6em;
+}
+
+.sousnav li a{
+    align-self:center;
+    text-decoration:none;
+    color:#005454;
+    line-height:2em;
+    width:15vw;
+    transition:all .2s ease;
+}
+
+.sousnav a:hover{
+    color:white;
+}
+
+.sousnav .ssnav-active{
+    color:white;
+}
+
+/* Bouton menu Hamburger */
+#toggleButton{ 
+    font-family: 'Amatic SC', cursive;
+    /* font-weight:bold; */
+    font-size:2em;
+    color: white;
+    position: relative;
+    z-index: 1001;
+    align-items:center;
+    justify-content:flex-end;
+    margin-right:0.5em; 
+    display: none;
+    height:1.7em;
+    cursor: pointer;
+} 
+
+/* Classes animation nav */
+.menuSmall{
+    height:3.15em;
+    margin-left:10px;
+}
+
+.menuHeight{
+    border-width:0 0 3.8em 25px;
+    left:120px;
+}
+.sousnavHeight{
+    position:absolute;
+    top:2.8em;
+    height:1.8em;
+}
+
+.activeSN{
+    color:white;
+}
+/* Fin des classes animation */
+
+.cover{
+    width:100%;
+    height:23em;
+    background-size: cover;
+    background-position-y: -1em;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.coverTitle {
+    font-family:'Coming Soon', cursive;
+    position:relative;
+    font-size:1.5em;
+    float:left;
+    padding-left:0.5em; 
+    z-index:100;
+    bottom:-2.7em;
+}
+
+.biseauCover{
+    z-index:90;
+    position:absolute;
+    bottom:3.52em;
+    right:0;
+    width:35%;
+    border-style:solid;
+    border-color:transparent transparent #f5ba17 transparent;
+    border-width:0px 0px 3em 20px;
+}
+
+section{
+    max-width:1048px;
+    margin:3em auto 0;
+    padding:0 5%;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.3em;
+    text-align:center;
+    line-height:1.2em;
+}
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-align:center;
+    line-height:1.2em;
+    margin-top:1.5em;
+}
+
+footer{
+    margin:150px 0 0;
+    padding:0;
+    width:100%;
+    height:38em;
+    position:relative;
+    background-image: url(../image/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    overflow: hidden;
+    text-align:center;
+}
+
+footer svg{
+    width:100vw;
+    height:100%;
+}
+
+#arrowup{
+    width:40px;
+    position:relative;
+    z-index:1000;
+}
+
+#arrowup:hover {
+    animation: ArrowUp 0.5s forwards;
+}
+
+@keyframes ArrowUp {
+    0% {
+        bottom:0;
+    }
+    25% {
+        bottom:5px;
+    }
+    50%{
+        bottom:0;
+    }
+    75% {
+       bottom:5px
+    }
+    100% {
+        bottom:0;
+    }
+}
+
+#orgaFooter{
+    display:flex;
+    justify-content:space-around;
+    max-width: 1048px;
+    height:100%;
+    margin:270px auto;
+    padding:50px 0 0;
+    text-align:center;
+    color:white;
+}
+
+#orgaFooter>div{
+    width:30%;
+}
+
+footer h4{
+    font-size: 1.3em;
+}
+
+footer p{
+    text-align:center;
+}
+
+.footerLink{
+    text-decoration:none;
+    transition:all ease-in-out .1s;
+    color:white;
+}
+
+.footerLink:hover{
+    color:#E69237;
+}
+
+#copyright{
+    font-size:0.6em;
+    color:white;
+    position:absolute;
+    bottom:10px;
+    display:block;
+    margin: auto;
+}
+
+.textLink{
+    text-decoration:none;
+    color:#005454;
+    font-weight:bold;
+}
+
+.textLink:hover{
+    color:#0fa3a3;
+}
+
+.socialMedia a{
+    margin:10px;
+    font-size:2.5em;
+    transition:all .3s ease;
+}
+
+#orgaFooter .bird{
+    position:absolute;
+    bottom:500px;
+    height:120px;
+    width:120px;
+    animation: Birds 6s infinite ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes Birds {
+    0% { background-image: url(../image/bird1.png);
+        left:0;
+        bottom:608px;}
+    3% {background-image: url(../image/bird2.png);
+        left:3%;
+        bottom:600px;}
+    6% {background-image: url(../image/bird3.png);
+        left:6%;
+        bottom:592px;}
+    9% {background-image: url(../image/bird2.png);
+        left:9%;
+        bottom:600px;}
+    12% {background-image: url(../image/bird1.png);
+        left:12%;
+        bottom:608px;}
+    15% {background-image: url(../image/bird2.png);
+        left:15%;
+        bottom:600px;}
+    18% {background-image: url(../image/bird3.png);
+        left:18%;
+        bottom:592px;}
+    21%{background-image: url(../image/bird2.png);
+        left:21%;
+        bottom:600px;}
+    24% {background-image: url(../image/bird1.png);
+        left:24%;
+        bottom:608px;}
+    27% {background-image: url(../image/bird2.png);
+        left:27%;
+        bottom:600px;}
+    30% {background-image: url(../image/bird3.png);
+        left:30%;
+        bottom:592px;}
+    33% { background-image: url(../image/bird2.png);
+        left:33%;
+        bottom:600px;}
+    36% {background-image: url(../image/bird1.png);
+        left:36%;
+        bottom:608px;}
+    39% {background-image: url(../image/bird2.png);
+        left:39%;
+        bottom:600px;}
+    42% {background-image: url(../image/bird3.png);
+        left:42%;
+        bottom:592px;}
+    45% {background-image: url(../image/bird2.png);
+        left:45%;
+        bottom:600px;}
+    48% {background-image: url(../image/bird1.png);
+        left:48%;
+        bottom:608px;}
+    51% {background-image: url(../image/bird2.png);
+        left:51%;
+        bottom:600px;}
+    54%{background-image: url(../image/bird3.png);
+        left:54%;
+        bottom:592px;}
+    57% {background-image: url(../image/bird2.png);
+        left:57%;
+        bottom:600px;}
+    60% {background-image: url(../image/bird1.png);
+        left:60%;
+        bottom:608px;}
+    63% {background-image: url(../image/bird2.png);
+        left:63%;
+        bottom:600px;}
+    66% { background-image: url(../image/bird3.png);
+        left:66%;
+        bottom:592px;}
+    69% {background-image: url(../image/bird2.png);
+        left:69%;
+        bottom:600px;}
+    72% {background-image: url(../image/bird1.png);
+        left:72%;
+        bottom:608px;}
+    75% {background-image: url(../image/bird2.png);
+        left:75%;
+        bottom:600px;}
+    78% {background-image: url(../image/bird3.png);
+        left:78%;
+        bottom:592px;}
+    81% {background-image: url(../image/bird2.png);
+        left:81%;
+        bottom:600px;}
+    84% {background-image: url(../image/bird1.png);
+        left:84%;
+        bottom:608px;}
+    87%{background-image: url(../image/bird2.png);
+        left:87%;
+        bottom:600px;}
+    90% {background-image: url(../image/bird3.png);
+        left:90%;
+        bottom:592px;}
+    93% {background-image: url(../image/bird2.png);
+        left:93%;
+        bottom:600px;}
+    97% {background-image: url(../image/bird1.png);
+        left:97%;
+        bottom:608px;}
+    100% {background-image: url(../image/bird2.png);
+        left:100%;
+        bottom:600px;}
+}
+
+/* Fin de la partie commune */
+
+
+
+
+
+
+
+
+
+/* ----------------------- Page Accueil ----------------------- */
+
+#brocoli{ /* Remplacer par une autre image et remplacer le # */
+    background-image: url(../image/couverture.jpg);
+    background-position:0 -12em ;
+}
+
+#sign{
+    font-weight:bold;
+    font-style: italic;
+    text-align:right;
+    margin-right:20px;
+}
+
+#links{
+    display:flex;
+    justify-content:space-around;
+    margin: 4em auto;
+}
+
+.btnClassic {
+    width:12em;
+    height: 12em;
+    margin:10px;
+    position:relative;
+    transition: ease-in-out 0.2s all;
+    cursor: pointer;
+}
+
+.btnClassic:hover{
+    opacity:0.8;
+}
+
+.btnClassic--legumes{
+    background-image: url(../image/legumes.png);
+    background-size: cover;
+    border-radius:2px;
+    box-shadow: #eb8521 15px 15px;
+    z-index:30;
+}
+.btnClassic--activites{
+    background-image: url(../image/activites.jpg);
+    background-size: cover;
+    background-position: -5em 0;
+    border-radius:2px;
+    box-shadow: #fad673 15px 15px;
+    z-index:30;
+}
+.btnClassic--decouvrir{
+    background-image: url(../image/decouvrir.png);
+    background-size: cover;
+    background-position: -2em 0;
+    border-radius:2px;
+    box-shadow: #70c7c7 15px 15px;
+    z-index:30;
+}
+
+.btnClassic p{
+    position:absolute;
+    bottom:20px;
+    padding: 0.3em 2em 0.3em 0.5em;
+    text-decoration:none;
+    font-family: 'Coming Soon', cursive;
+    font-weight:bold;
+    font-size:1.2em;
+    color: #005454;
+    z-index:30;
+}
+
+.btnClassic--legumes p{
+    background-color: #eb8521;
+}
+.btnClassic--activites p{
+    background-color: #fad673;
+}
+.btnClassic--decouvrir p{
+    background-color: #70c7c7;
+}
+
+#mercure{
+    background-image: url(../image/mercure.png);
+    background-position-y: -18em;
+}
+
+.mercure{
+    display:flex;
+    align-content: space-around;
+}
+
+.mercure img{
+    width:200px;
+    height:200px;
+    transform: rotate(8deg);
+    margin:auto;
+}
+
+.mercure p{
+    width:75%;
+    margin:auto;
+}
+
+
+
+
+
+
+/* ----------------------- Page Légumes ----------------------- */
+
+/* test map points collecte*/
+.fName{
+    cursor:pointer;
+    margin:15px 0;
+    display:block;
+    transition: all .1s ease-in-out;
+}
+
+.fName:hover{
+    transform: scale(1.08)
+}
+
+.tag{
+    cursor:pointer;
+}
+
+.menu p {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size : 2em;
+}
+
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    max-width:1048px;
+    width: 100%;
+}
+
+.menu-list li{
+    display:block;
+    width: 150px;;
+    padding: 0.5em;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    max-width:1048px ;
+    /* border:10px solid #70c7c7;
+    border-radius:10px; */
+}
+
+#friend_detail{
+    text-align: center;
+    margin-bottom: 5em;
+    background-color: RGB(0, 0, 0,0.1);
+    /* color:white; */
+    border-radius: 2px;
+   /* background-color:rgb(228, 146, 24, 0.2); */
+}
+
+#friend_detail a{
+    color:#0fa3a3;
+    text-decoration:none;
+}
+
+#friend_detail a:hover{
+    color:#eb8521;
+}
+
+.menu li{
+    text-align: center;
+}
+
+.card-image{
+    padding-bottom: 2em;
+}
+
+.titlecollecte{
+    margin-bottom: 1em;;
+}
+
+.informations{
+    display: flex;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 60%;
+    padding: 1em 0 0 0;
+    margin: auto;
+}
+
+.infosleft{
+    display:block;
+    width: 50%;
+}
+
+.infosright{
+    display:block;
+    width: 50%;
+}
+
+/* FIN */
+
+#coverLegumes{
+    background-image: url(../image/vegetable.jpg);  
+}
+
+#choix{
+    display:flex;
+    justify-content:space-around;
+    width: 70%;
+    margin: auto;
+}
+
+.presentationLegumes p{
+    padding:1em;
+    text-align:center;
+}
+
+#citation{
+    padding:0;
+}
+
+.legumes h3, .collecte h2{
+    margin-top:3em;
+    text-align:center;
+}
+
+#btncommandeLeg{
+    background-color: #10A2A2;
+    padding: 2em;
+    margin: 1em;
+    width: 190px;
+    height: 190px;
+}
+
+.btnClassic--commander{
+    background-image: url(../image/command.jpg);
+    background-size: cover;
+    border-radius:2px;
+    box-shadow: #0fa3a3 10px 10px;
+    z-index:30;
+    margin-left:15%;
+    background-position-x: -4em;
+}
+
+.btnClassic--commander p{
+    background-color: #0fa3a3;
+}
+
+.btnClassic--cueillette{
+    background-image: url(../image/venirCueillir.jpg);
+    background-size: cover;
+    border-radius:2px;
+    box-shadow: #eb8521 10px 10px;
+    z-index:30;
+    margin-right:15%;
+    background-position-x: -3em;
+}
+
+.btnClassic--cueillette p{
+    background-color: #eb8521;
+}
+
+#choix img{
+    display: block;
+    margin: auto;
+}
+
+.legumes>p {
+    text-align: center;
+    line-height:1.8em;
+}
+
+.legumes a {
+    color: #005555;
+    text-decoration:none;
+}
+
+#contactLinkLeg{
+    color:#0fa3a3;
+    font-weight: bold;
+}
+
+#contactLinkLeg:hover{
+    color:#eb8521;
+}
+
+.mapMel{
+    display:flex;
+    text-align:center;
+    margin: 50px 0 50px;
+}
+
+.mapMosaic{
+    display:none;
+    text-align:center;
+    margin: 50px 0 50px;
+}
+
+.mapPain{
+    display:none;
+    text-align:center;
+    margin: 50px 0 50px; 
+}
+
+.mapCook{
+    display:none;
+    text-align:center;
+    margin: 50px 0 50px; 
+}
+
+iframe{
+    display:block;
+    margin:0 auto;
+    width:100%;
+    height:400px;
+}
+
+.logocollecte{
+   display:flex;
+}
+
+.logocollecte p{
+    padding:0 2em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.horaires{
+    display: none;
+}
+
+.logocollecte img{
+ display: block;
+    margin: auto;
+}
+
+.pointcollecte{
+    width: 40%;
+}
+
+.fName img{
+    width:90%;
+}
+
+
+
+
+
+
+
+
+/* ----------------------- Page Activités ----------------------- */
+
+#enfants{
+    background-image: url(../image/enfantjardin.png);
+}
+
+/* - section au potager - */
+.flex{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#blockceuillette{
+  margin-bottom: 1em;
+}
+
+#ceuillir{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    position: relative;
+    margin: 0;
+    top:-1em;
+}
+
+#ceuillir p{
+    margin: 0;
+}
+
+
+#chou{
+    width: 20%;
+    position: absolute;
+    left:2em;
+    margin: 1em;
+}
+
+
+#fondCueillette{
+  vertical-align: middle;
+  background-color: #70c7c7;
+  display: inline-block;
+  margin-left: 2em;
+  width: 40%;
+  position: relative;
+  transform: rotate(3deg);
+  left:1em;
+}
+
+#cueillette{
+    position: relative;
+    width: 97%;
+    top: 0.5em;
+    transform: rotate(-1deg);
+}
+
+.btn--act{
+    position:relative;
+    text-align:center;
+    margin-bottom:7em;
+    top:2em;
+}
+
+/* - section écoles - */
+#écoles{
+    height: 40%;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top:-2.5em;
+}
+#blockecoles{
+    position: relative;
+    margin: 0;
+}
+
+#titleecole{
+  color: #f5ba17;
+  text-transform: capitalize;
+}
+
+#fille{
+    position: absolute;
+    width: 4em;
+    right:3em; ;
+}
+
+#fondEcole{
+    top:1em;
+    height: 40%;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #f5ba17;
+    margin-right: 2em;
+    width: 40%;
+    transform: rotate(-2deg);
+}
+#grainesmain{
+    position: relative;
+    float: right;
+    width: 101%;
+    transform: rotate(4deg);
+    left:-1em;
+}
+  
+/*fin école*/
+  
+/* - section reinsertion - */
+#blockreinsertion{
+    position: relative;
+}
+  
+#reinsertion{
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top:1em;
+}
+
+#dame{
+    width: 20%;
+    position: relative;
+    left: 5em;
+}
+
+#fondreinsertion{
+    display: inline-block;
+    background-color: #9ed9d9;
+    margin-left: 3em;
+    vertical-align: middle;
+    width: 40%;
+    position: relative;
+    transform: rotate(-3deg);
+}
+    
+#groupe{
+    position: relative;
+    width: 101%;
+    transform: rotate(4deg);
+    top:0.5em;
+    left:-1em;
+}
+    
+.btn3{
+    top:1em;
+}
+
+#titlereinsertion{
+   color: #9ed9d9;
+}
+  
+/*fin reinsertion*/
+  
+/* - section Formation - */
+
+#blockFormation{
+    position: relative;
+}
+    
+#fondFormation{
+    height: 40%;
+    display: inline-block;
+    background-color: #EA8422;
+    margin-right: 2em;
+    vertical-align: middle;
+    width: 40%;
+    position: relative;
+    transform: rotate(-3deg);
+    top:2em;
+}
+
+#semis{
+    position: relative;
+    width: 98%;
+    transform: rotate(5deg);
+    top:0.5em;
+}
+    
+#formations{
+    height: 40%;
+    vertical-align: middle;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+#titleFormation{
+    color: #EA8422;
+    text-transform: capitalize;
+}
+      
+#hommeRateau{
+    width: 25%;
+    position: absolute;
+    right : 3em;
+}
+      
+.btn4{
+    top:3em;
+    margin-bottom: 10em;
+}
+  
+/*fin Formation*/
+  
+/*CoverChezVous*/  
+        
+#chezvous{
+    height: 500px;
+    max-width:1048px;
+}
+
+#CarPotager{
+    height: 20em;;
+    background-image: url(../image/carré.png);
+}
+  
+  /*Fin CoverChezVous*/  
+  
+  /*debutChezVous*/
+#blockPotagerEntreprise{
+    width: 60%;
+    display: inline-block;
+    position: relative;
+    top:3em;
+    margin-right: 3em;
+}
+  
+#blockPotagerchezsoi{
+    display: inline-block;
+    width: 300px;
+    margin:0 auto; 
+    background: url(..//image/1x/post.png);
+    height:300px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#titlePotagerEntreprise{
+    color: #EA8422;
+    margin:0;
+}
+  
+#textepostit{
+    width: 70%; 
+    margin: 0 auto;
+    position: relative;
+    text-align:center;
+    font-size:.9em;
+    top:2em;
+    left:-0.5em;
+}
+  
+#titlePotagerchezsoi{
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    left:-0.4em;
+    top:1em;
+    color: #005454;
+}
+
+
+
+
+
+
+
+
+/* ----------------------- Page Decouvrir ----------------------- */
+
+#team{
+    background-image: url(../image/team.jpg);
+}
+
+.presentation{
+    display:flex;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.presentation > img{
+    height:100px;
+    align-self:center;
+    margin:-150px auto 0;
+}
+
+.presentation > div{
+    width:350px;
+    position:relative;
+}
+
+#MelPic img, #PeterPic img{
+    height:350px;
+    display:flex;
+    margin:0 auto;
+    transform: rotate(-4deg);
+}
+
+#MelPic{
+    background-color: #f5ba17;
+    transform:rotate(4deg);
+}
+#PeterPic{
+    background-color: #0fa3a3;
+    transform:rotate(4deg);
+}
+
+#arrowPeter{
+    float:right;
+    margin-right:25px;
+}
+
+#arrowMel{
+    float:left;
+}
+
+#arrowAsbl{
+    width:20%;
+    align-self:flex-start;
+    margin-top:50px;
+    position:absolute;
+    left:50%;
+    transform: rotate(10deg);
+}
+
+h5{
+    margin:100px 0 0;
+    font-family: 'Coming Soon', cursive;
+    font-size:1.2em;
+}
+
+#MelName{
+    color: #f5ba17;
+}
+#PeterName{
+    color:#0fa3a3;
+}
+
+#asblName{
+    Width:40%;
+    color:#E69237;
+}
+
+#asblPic{
+    background-color:#E69237 ;
+    transform: rotate(-3deg)
+}
+
+#asblPic img{
+    transform: rotate(3deg);
+}
+
+.presentation p{
+    margin:0 0 15px;
+    text-align:left;
+    font-size:0.9em;
+}
+
+.presentation b{
+    font-size:1.1em;
+}
+
+#permaCover{
+    background-image: url(../image/permaculture.jpg);
+}
+
+article{
+    display:flex;
+    align-content: space-between;
+    align-items:center;
+    margin:100px auto;
+    position:relative;
+}
+
+article>div{
+    width:35%;
+    margin:auto;
+}
+
+article .articleText{
+    width:45%;
+}
+
+article img{
+    width:100%;
+}
+
+#colorPerma img{
+    transform: rotate(3deg);
+    box-shadow: 10px 10px #f5ba17;
+}
+
+.leftPic{transform: rotate(-4deg);}
+.leftPic img{transform:rotate(2deg);}
+
+.rightPic{transform: rotate(4deg);}
+.rightPic img{ transform:rotate(-2deg);}
+
+#color1{background-color:#0fa3a3}
+#color2{background-color:#E69237}
+#color3{background-color:#f5ba17}
+#color4{background-color:#005454}
+
+
+article li{
+    margin:10px 0;
+}
+
+
+#collab{
+    background-image: url(../image/collab.jpg);
+    background-position-y: -300px;
+}
+
+#evasion{
+    display:flex;
+    /* align-content:space-between; */
+    align-items:center;
+   /* margin:70px 0; */
+}
+
+#evasion div{
+    width:40%;
+    margin:50px auto;
+}
+
+#evasion img{
+    width:100%;
+}
+
+#integration img{
+    display:block;
+    width:50%;
+    margin: 0 auto;
+}
+
+#projets{
+    background-image: url(../image/projets.jpg);
+}
+
+.projetsList {
+    display:flex;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.projetsList div{
+    width:205px;
+    height:200px;
+    margin:70px auto 0;
+    display:flex;
+    align-items: center;
+    padding:15px;
+}
+
+.projetsList p{
+    margin:0 auto;
+    text-align:center;
+}
+
+.projetsList a{
+    text-decoration:none;
+    color:#0fa3a3;
+    font-weight:bold;
+}
+
+.postIt1{
+    background-image: url(../image/postIt-pinA.png);
+    background-size: cover;
+    transform:rotate(2deg);
+}
+.postIt2{
+    background-image: url(../image/postIt-pinB.png);
+    background-size: cover;
+    transform:rotate(-2deg);
+}
+
+
+
+
+
+
+
+/* ----------------------- Page Contact ----------------------- */
+
+#contact{
+    display:flex;
+    justify-content:space-between;
+}
+
+#contact>div{
+    margin:0 30px;
+}
+
+#contact form{
+    display:flex;
+    flex-direction:column;
+}
+
+#formulaire{
+    width:50%;
+    max-width:50%;
+}
+
+.formField{
+    margin:5px 0;
+    border-radius:5px;
+    padding: 7px;
+    font-size:0.8em;
+    font-family:'Raleway', sans-serif;
+    border: 2px solid #E69237;
+}
+
+#message{
+    width:fixed;
+    height:150px;
+    resize:none;
+}
+
+#formulaire button{
+    background-color: transparent;
+    border:none;
+    margin-top:-20px;
+}
+
+#formulaire button span{
+    font-size:1.8em;
+}
+
+.btn{
+    position: relative;
+    text-align: center;
+  
+}
+  
+.btn__link {
+    background: url(../image/sprite.png);
+    background-position:5px 0px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    font-family:'Coming Soon', cursive;
+    text-decoration: none;
+    transition: padding 0.1s, top 0.2s;
+    padding: 1em 0 0 0;
+    color: #005454;
+    width: 220px;
+    height: 60px;
+}
+  
+.btn__link:hover {
+    color: #0fa3a3;
+    background-position:6px -107px;
+}
+  
+.btn__link:active {
+    color: #70c7c7;
+    background-position: 5px -205px;
+}
+  
+.texteBtn{
+    position: relative;
+    padding: 2em;
+    display: block;
+    width: 200px;
+    top: -2em;
+    left:-1.5em;
+
+}
+  
+    .texteBtn:active{
+      top:-1.7em;
+    }
+
+
+.contactPostIt{
+    background-image: url(../image/postit1.svg);
+    background-repeat: no-repeat;
+    /* margin-top:100px; */
+    position:relative;
+    width:30%;
+    height:320px;
+    text-align:center;
+    padding:15px;
+    align-self:center;
+}
+
+.contactPostIt p{
+    text-align:center;
+    margin:10px 0;
+    font-size:0.9em;
+    font-weight:bold;
+}
+
+#mel{
+    position:absolute;
+    top:-106px;
+    left:40px;
+    height:120px;
+}
+
+#peter{
+    position:absolute;
+    top:-102px;
+    right:40px;
+    height:120px;
+}
+
+#logoContact{
+    height:110px;
+}
+
+#map{
+    display:flex;
+    text-align:center;
+    margin: 50px auto 150px;
+    width:60%;
+}
+
+/* iframe{
+    display:block;
+    margin:0 auto;
+    width:60%;
+    height:400px;
+} */
+
+#acces{
+    display:flex;
+    justify-content:space-around;
+}
+
+#entree{
+    width:550px;;
+    height:350px;
+    background-color: #E69237;
+    transform: rotate(4deg);
+}
+
+#entree img{
+    width:100%;
+    transform:rotate(-4deg);
+    height:350px;
+}
+
+#acces .contactPostIt{
+    display:flex;
+    flex-direction:column;
+}
+
+#acces span{
+    height:60px;
+}
+
+
+
+
+
+
+
+
+/* ----------------------- Page Commande ------------------------ */
+
+#commandeLegumes{ /* Changer la classe et l'image de couverture */
+    background-image: url(../image/laitue.jpg);
+}
+
+.choice{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+      height: 100%;
+      margin: 4em 0;
+    }
+    
+    .panierL{
+        width: 23%;
+        text-align: center;
+    }
+    
+    
+    #flechelegume{
+        position: relative;
+        top:0.8em;
+    }
+    
+    .panierL img:first-child{
+        width: 100%  ;
+        text-align: center;
+    }
+    
+    
+    #manqueespace{
+        padding-right: 0.5em;
+    }
+    
+    .choice p {
+        text-align: center;
+    }
+    .nomProd{
+        font-weight:bold;
+    }
+    
+    /*.legume strong {
+        font-size: 1.3em;
+        text-align: center;
+          }
+    */
+    
+    h3{
+        font-family: 'Amatic SC', cursive;
+        font-size: 2em;
+        text-align:center;
+        line-height:1.2em;
+    }
+    
+    .legumessemaine{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    height: 100%;
+    }
+    .legume{
+        width: 28%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        }
+    
+    
+    .fondlegume{
+        background-color: #F6B917;
+    
+     text-align: center;
+    
+    }
+    
+    .fondlegume img{
+        width: 100%;
+        position: relative;
+        top:0.5em;
+        left :0.5em;
+    }
+    
+    .description{
+        text-align: center;
+    }
+    
+    input{
+        margin: auto;
+    }
+    .legPanier input{
+        width:3em;
+        height: 2em;
+        vertical-align: middle;
+    }
+    .legPanier button{
+        border: none;    
+        background: transparent url(../image/panierI.png) no-repeat center;
+        color : #005555;
+        cursor:pointer;
+        width: 3em;
+        height: 3em;
+        vertical-align: middle;  
+    }
+    
+    .legPanier button:hover{
+        background: transparent url(../image/panierIb.png) no-repeat center;
+    }
+    .legPanier button:active{
+        background: transparent url(../image/panierIb.png) right no-repeat;
+        
+    }
+    
+    .btn{
+        margin-top: 4em;
+    }
+    .details{
+        text-align: center;
+    }
+    
+    
+    /* table commande */
+    #listePanier{
+        display : flex;
+        justify-content: center;
+        
+    }
+    #tbPanier {
+        
+        border-collapse: collapse;
+        width: 80%;
+      }
+      
+    #tbPanier td, #tbPanier th{
+        border-bottom: 1px solid #005454;
+        padding: 8px;
+        text-align:center;
+      }
+      
+      #tbPanier tr:nth-child(even){background-color: #9fdada;}
+      
+      #tbPanier tr:hover {background-color: #fbe3a2;}
+      
+      #tbPanier th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #0fa3a3;
+        color: white;
+      }
+      #totalPanier td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #EB8522;
+        color: white;
+        border-bottom: none;
+    
+          }
+
+
+
+@media all and (max-width: 1430px){
+    #mercure{
+        background-position-y:-13em;
+    }
+}
+
+
+
+@media all and (max-width: 1048px){
+    nav{
+        width:85%;
+    }
+
+    #orderNow{
+        padding:10px 20px;
+    }
+
+    #orderNow:hover{
+        color:black;
+        margin:0;
+        padding:13px 23px;
+    }
+
+    
+    .sousnav{
+        padding:0 10vw;
+    }
+
+    .sousnav li a{
+        width:15vw;
+    }
+
+    
+    /* ----------------------- Page Accueil ----------------------- */
+
+    #brocoli{
+        background-position:0 -5em ;
+    }
+    #mercure{
+        background-position-y: -10em;
+    }
+
+
+    
+
+
+    /* ----------------------- Page Légumes ----------------------- */
+
+    /* ----------------------- Page Activités ----------------------- */
+    .sectionTitle{
+        margin: 1.5em auto;
+      }
+
+    #fondCueillette{
+        margin-left: 0.8em;
+    }
+
+    #fondEcole{
+        position:relative;
+        top:2em;
+    }
+
+    #blockPotagerEntreprise{
+        width: 50%;
+    } 
+
+    .btn--act{
+        top:1em;
+        margin-bottom:3em;
+    }
+
+    #chezvous{
+        height: 700px;
+    }
+
+    /* ----------------------- Page Découvrir ----------------------- */
+
+    .presentation>img{
+            display:none;
+        }
+
+        .presentation>div{
+            margin: 0 auto;
+        }
+
+    /* ----------------------- Page Contact ----------------------- */
+
+
+    .contactPostIt{
+        font-size:0.9em;
+        line-height:1.2em;
+    }
+
+    #peter{
+        right:20px;
+    }
+
+    #map{
+        width:75%;
+    }
+
+    /* iframe{
+        width:75%;
+    } */
+
+    #entree{
+        width:470px;
+        height:300px;
+    }
+
+    #entree img{
+        height:300px;
+    }
+
+
+    /* ---------------- Page commande -------------------- */
+
+    #commandeLegume{ /* Changer le # */
+        background-position:0 -5em ;
+    }
+
+    .choixtype p{
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+@media all and (max-width: 950px){
+
+    /* Partie commune 950px */
+    html{
+        font-size:18px;
+    }
+    body{
+        padding:3.4em 0 0;
+    }
+
+    #toggleButton{
+        display:flex;
+        transition: all 0.3s ease;
+    }
+
+    .biseauCover{
+        width: 55%;
+        bottom:2em;             
+    }
+
+    svg{
+        height:3em;
+        margin-left:10px;
+    }
+
+    nav{
+        display: block;
+        width: 100%;
+        height:3.8em;
+        margin-left:10px;
+    }
+    
+    .menuSmall{
+        height:3em;
+        margin-left:10px;
+    }
+    
+    .menuHeight{
+        border-width:0 0 3.8em 25px;
+        left:100px;
+    }
+
+    header>div{
+        border-width:0 0 3.82em 25px;
+        left:100px;
+    }
+
+    nav ul{
+        display:none;
+        list-style:none;
+        width: 100vw;
+        float: right;
+        padding: 0;
+        z-index: 10000;
+    }
+
+    .menuNavigation{
+        display: none;
+    }
+
+    .menuNavigation.is-opened {
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        top:2.8em;
+        left:0;
+        right:0;
+        margin:0;
+    }
+
+    
+    .menuNavigation a{
+        display:block;
+        transition:all .5s ease;
+        text-align:center;
+        background-color: #70c7c7;
+        padding: 1em;
+        width:100%;
+    }
+
+    .menuNavigation>li>a:hover{
+        background-color:#0fa3a3; 
+        transition:all .5s;
+    }
+
+    #orderNow{
+        display:none;
+    }
+
+    #orderNowMobile{
+        display:block;
+        position:fixed;
+        top:10px;
+        right:80px;
+        width:170px;
+        height:50px;
+        border-radius:5px;
+        background-color:#eb8521 ;
+        z-index:6000;
+        color:white;
+        font-family: 'Amatic SC', cursive;
+        line-height:50px;
+        text-align:center;
+        text-decoration:none;
+        font-size:1.5em;
+    }
+
+    .sousnav{
+        display:none;
+    }
+
+    .cover{
+        height:18em;
+    }
+
+    .coverTitle{
+        font-size:1.4em;
+    }
+
+    footer{
+        margin:75px 0 0;
+    }
+
+    #orgaFooter{
+        margin:200px auto;
+    }
+
+    #orgaFooter>div{
+        width:50%;
+    }
+
+    #orgaFooter .bird{
+        display:none;
+    }
+    /* Fin partie commune 950px */
+    
+
+
+
+
+    /* ----------------------- Page Accueil ----------------------- */
+
+    #brocoli{
+        background-position:0 -1em ;
+    }
+
+    .btnClassic{
+        width:10em;
+        height:10em;
+    }
+
+    .btnClassic--legumes{
+        box-shadow: #eb8521 5px 5px;
+    }
+    .btnClassic--activites{
+        box-shadow: #fad673 5px 5px;
+    }
+    .btnClassic--decouvrir{
+        box-shadow: #70c7c7 5px 5px;
+    }
+
+    .btnClassic p{
+        bottom:-5px;
+        font-size:0.8em;
+    }
+
+    #mercure{
+        background-position-y: -7em;
+    }
+
+    .mercure img{
+        display:none;
+    }
+   
+
+
+
+
+
+    /* ----------------------- Page Légumes ----------------------- */
+
+    
+    #choix{
+        flex-direction: column;
+        height: 100%;
+        width:  100%;
+    }
+
+
+    .logocollecte{
+        justify-content:center;
+        flex-wrap: wrap; 
+    }
+
+     #btncommandeLeg{
+        margin: auto;
+        display: block;
+    }
+
+     #btncueillette{
+        margin: auto;
+        display: block; 
+        margin-top:2em;
+     }
+
+    .informations{
+        width: 80%
+    }
+
+    .menu-list li{
+        width: 117px;
+        padding: 0.3em;
+        margin-bottom: 0.5;
+    }
+
+    .menu-list li img{
+        width: 93%;
+        padding: 0.5em;
+    }
+
+    
+
+
+
+
+
+
+    /* ----------------------- Page Activités ----------------------- */
+
+    .coverTitle {
+        padding-left:0.1em; 
+    }
+
+    #chou{
+        display: none;
+    }
+
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    #ceuillir{
+        width: 80%;
+        padding: 0% 10%;
+        display: block;
+    }
+
+    #ceuillir p{
+        position: relative;
+    }
+
+    #fondCueillette{
+        display: block;
+        width: 60%;
+        text-align:center;
+        margin: 30px auto 0;
+        left:0;
+        transform: rotate(0deg);
+    }
+    
+    #cueillette{
+        transform: rotate(0deg);
+        top:0.4em;
+        left:0.4em;
+        width: 100%;
+    }
+
+    #fondEcole{
+        width: 60%;
+        text-align:center;
+        margin: 0% 20% 10% 20% ;
+        transform: rotate(0deg);
+        position: relative;
+        top:0;
+    }
+
+    #écoles{
+      width: 80%;
+      padding: 0% 10%;
+    }
+
+    #fille{
+      display: none;
+    }
+
+    #grainesmain{
+        transform: rotate(0deg);
+        top:0.4em;
+        left:0.4em;
+        width: 100%
+    }
+    
+    #dame{
+      display: none;
+    }
+
+    #fondreinsertion{
+        width: 60%;
+        text-align:center;
+        margin: 4% 20% 0% 20% ;
+        transform: rotate(0deg);
+    }
+
+    .btn2{
+        top:-1.5em;
+    }
+
+    .btn4{
+        top:-1em;
+    }
+
+    #groupe{
+        transform: rotate(0deg);
+        top:0.4em;
+        left:0.4em;
+        width: 100%
+    }
+
+    #reinsertion{
+      width: 80%;
+      padding: 0% 10%;
+    }
+
+    #blockreinsertion{
+        margin-top:-3em;
+    }
+    
+    #blockFormation{
+        margin-top: 0em;
+    }
+
+    #fondFormation{
+        width: 60%;
+        text-align:center;
+        margin: 0% 20% 10% 20% ;
+        transform: rotate(0deg);
+    }
+
+    #semis{
+        transform: rotate(0deg);
+        top:0.4em;
+        left:0.4em;
+        width: 100%
+    }
+    
+    #formations{
+      width: 80%;
+      padding: 0% 10%;
+    }
+
+    #hommeRateau{
+      display: none;
+    }
+
+    #chezvous{
+        height: 830px;
+    }
+    
+    #blockPotagerEntreprise{
+        top:0;
+        width: 80%;
+        padding: 0 9% 0 9%;
+        margin-right: 0;
+    }
+    
+    #blockPotagerchezsoi{
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    #chezvous{
+      height:100%
+    }
+
+
+    /* ----------------------- Page Découvrir ----------------------- */
+
+    #team{
+        background-image: url(../image/teamMobile.jpg);
+        background-position-y: -0.1em;
+    }
+
+    .presentation>div{
+        width:40vw;
+        max-width:300px;
+    }
+
+    #MelPic img, #PeterPic img{
+        height:40vw;
+        max-height:300px;
+    }
+
+    #arrowAsbl{
+        margin-top:15px;
+    }
+
+    #permaCover{
+        background-position-y: 0.1em;
+    }
+
+    #social{
+        background-position-y: 0.1em;
+    }
+
+    .projetsList{
+        flex-wrap: wrap;
+    }
+
+    #projets{
+        background-position-y: 0.1em;;
+    }
+
+
+
+
+    /* ----------------------- Page Contact ----------------------- */
+
+
+    #contact{
+        flex-direction: column-reverse;
+        position:relative;
+    }
+
+    #contact #formulaire{
+        width:80%;
+        max-width:unset;
+        margin:0 auto;
+        justify-content: center;
+    }
+
+    #contactForm{
+        margin:0 auto;
+        width:100%;
+    }
+
+    #mel, #peter{
+        display:none;
+    }
+
+    .contactAcces{
+        background-image: unset;
+    }
+
+    .contactPostIt span{
+        display:none;
+    }
+
+    #acces .contactPostIt{
+        height:auto;
+        width:85%;
+        max-width:400px;
+        margin-bottom:50px;
+        font-size:1em;
+    }
+
+    #map{
+        margin-bottom:50px;
+    }
+
+    #contact .contactPostIt{
+        /* max-width:50%; */
+        width:270px;
+        height:270px;
+        margin:0 0 30px;
+    }
+
+    #acces{
+        flex-direction: column;
+    }
+
+    #entree{
+        width:80%;
+        height:auto;
+        margin:20px auto;
+    }
+
+    #entree img{
+        height:auto;
+    }
+
+
+    /* --------------------- page commande ----------------------- */
+
+    .legume{
+        width: 38%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    #commandeLegumes{ /* changer le # */
+        background-position:0 -1em ;
+    }
+  
+    .choixtype{
+        width: 25%;
+    }
+
+
+    .choixtype input{
+        margin-top: 1em;
+    }
+
+}
+
+
+
+
+
+
+    
+@media all and (max-width: 550px){
+
+         /* Partie commune 550px */
+    html{
+        font-size:16px;
+    }
+
+    body{
+        padding:3em 0 0;
+    }
+
+    #toggleButton{
+        display:flex;
+        transition: all 0.3s ease;
+    }
+
+    svg{
+        height:3em;
+        margin-left: 10px;
+    }
+
+    nav{
+        display: block;
+        width: 100%;
+        height:3em;
+        margin-left:10px;
+    }
+
+    header{
+        height:3.79em;
+    }
+
+    header>div{
+        border-width:0 0 3.8em 25px;
+        left:100px;
+    }
+
+    #orderNowMobile{
+        top:10px;
+        right:65px;
+        width:6em;
+        height:1.8em;
+        line-height:1.8em;
+        font-size:1.4em;
+    }
+
+    .cover{
+        height:15em;
+    }
+    
+    .biseauCover{
+        width: 70%;
+        bottom:2em;             
+    }
+
+    .coverTitle{
+        font-size:1.4em;
+    }
+
+    #arrowup{
+        display:none;
+    }
+
+    footer{
+        height:70em;
+        background-position-x: -560px;
+    }
+
+    #orgaFooter{
+        display:block;
+        padding-top:280px;
+    }
+
+    #orgaFooter>div{
+        margin:0 auto;
+    }
+
+    #copyright{
+        width:100%;
+    }
+    /* Fin partie commune 550px */
+
+
+
+    /* ----------------------- Page Accueil ----------------------- */
+
+    #links{
+        display: block;
+    }
+
+    .btnClassic{
+        display:block;
+        width:60vw;
+        height:60vw;
+        position:relative;
+        margin:30px auto;
+        background-position: 0 0;
+    }
+
+    .btnClassic--decouvrir, .btnClassic--activites{
+        background-position-x: -2.2em;
+    }
+
+    .btnClassic p{
+        font-size:1.2em;
+    }
+
+    #mercure{
+        background-position-y: -3em;
+    }
+
+    .mercure{
+        display:unset;
+    }
+
+    .mercure img{
+        display:block;
+        margin:30px auto 0;
+    }
+
+
+
+    
+    /* ----------------------- Page Légumes ----------------------- */
+
+    .pointcollecte{
+        width: 100%;
+    }
+
+    #choix{
+        text-align: center;
+    }
+
+    #directJardin{
+        padding-left: 0.4em;
+    }
+
+    .informations{
+        display:inline-block;
+        margin: 0;
+        text-align: center;
+        width: 100%
+    }
+
+    .infosleft{
+        display:inline-block;
+        width: 100%;
+        margin-left: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .infosright{
+         display:inline-block;
+         width: 100%;
+         margin-left: 0 auto;
+         margin-bottom: 1em;
+     }
+
+    .infosright{
+        display:inline-block;
+        width: 80%;
+        margin-left: 0 auto;
+    }
+ 
+    .menu-list li{
+        width: 110px;
+        padding: 0.5em;
+        margin-bottom: 0.5;
+    }
+ 
+    .menu-list li img{
+        width: 80%;
+        padding: 0.5em;
+    }
+ 
+     .imageis-3by1{
+        margin: 0;
+    }
+
+    .fName{
+        line-height: 1em;
+    }
+
+
+
+
+
+
+
+
+    /* ----------------------- Page Activités ----------------------- */
+
+    #fondCueillette{
+        width: 80%;
+        display:block;
+        margin:3em auto;
+    }
+
+    #blockceuillette{
+        margin-bottom:0;
+    }
+      
+    .btn--act{
+        top:0;
+        margin-bottom: 1em;
+    }
+
+    .btn1{
+        margin-top:-1em;
+    }
+      
+    #fondEcole{
+        width: 80%;
+        margin: 0em 10% auto;
+        top:0;
+    }
+
+    #écoles{
+        padding: 2% 10%;
+    }
+
+    .btn2{
+        top:2em;
+    }
+
+    #blockreinsertion{
+        top:0em;
+        margin-top:0;
+    }
+
+    #fondreinsertion{
+        width: 80%;
+        margin: 3em 10% auto;
+    }
+
+    .btn3{
+        top:0em;
+        margin-top:2em;
+    }
+
+    #fondFormation{
+        width: 80%;
+        margin: 0em 10% auto;
+    }
+    
+    .btn4{
+        top:0em;
+        margin:4em 0;
+    }
+      
+    #blockPotagerchezsoi{
+        display: block;
+        background: none;
+        height:200px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #titlePotagerchezsoi{
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.5em
+    }
+
+    .btn5{
+        top:-1em;;
+    }
+      
+    #chezvous{
+        height:100%
+    }
+
+    /* ----------------------- Page Découvrir ----------------------- */
+
+    .presentation{
+        display:unset;
+    }
+
+    .presentation>div{
+        width:70vw;
+        margin-bottom:30px;
+    }
+
+    #MelPic img, #PeterPic img{
+        height:70vw;
+    }
+
+    .presentationAsbl{
+        display:unset;
+        text-align:center;
+        width:70vw;
+    }
+
+    #asblPic{
+        width:70vw;
+    }
+
+    #asblPic img{
+        height:70vw;
+    }
+
+    .presentationAsbl>img{
+        display:none;
+    }
+
+    #asblName{
+        margin:0 auto;
+        width:70vw;
+        margin-top:20px;
+    }
+
+    article{
+        flex-direction:column;
+        margin:20px auto 90px;
+    }
+
+    article>div{
+        width:80%;
+    }
+
+    article .articleText{
+        width:100%;
+    }
+
+    .leftPic{
+        order:1;
+    }
+
+    .articleText{
+        margin-bottom:10px;
+    }
+
+    #evasion{
+        flex-direction: column;
+    }
+
+    #evasion div{
+        width:80%;
+        margin:10px auto;
+    }
+
+    #collab{
+        background-position-y: -100px;
+    }
+
+
+
+    /* ----------------------- Page Contact ----------------------- */
+
+    #map{
+        display:none;
+    }
+
+    #entree{
+        width:90%;
+    }
+
+    #acces p{
+        font-size:1.1em;
+    }
+
+    #formulaire button{
+        margin-top:-50px;
+        font-size:.8em;
+    }
+
+    #contact .contactPostIt{
+        width:250px;
+        height:250px;
+    }
+        
+
+    /* ----------------------- Page commande ------------------------ */
+
+    .legume{
+        width: 40%;
+       
+        }
+
+    .choixtype{
+        width: 45%;
+        margin-bottom: 2em;
+    }
+
+    .choice{
+        flex-wrap: wrap;
+    }
+        
+}
+
