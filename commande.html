@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Commande</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleCommande.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Coming+Soon|Raleway" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -474,9 +474,9 @@
 
             <ul class="menuNavigation" id="menuNav">
                 <li><a href="legumes.html">Nos légumes</a></li>
-                <li><a href="activites.html">Nos activités</a></li>
-                <li><a href="decouvrir.html">Nous découvrir</a></li>
-                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="#">Nos activités</a></li>
+                <li><a href="#">Nous découvrir</a></li>
+                <li><a href="#">Nous contacter</a></li>
                 <li><a href="#" id="orderNow">Commander <i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
@@ -489,7 +489,7 @@
       
     </div>
 
-    <section>
+    <section class="choixLegumes">
         <h1>Un panier tout fait </br>
             ou 
             des légumes à la carte</h1>
@@ -499,7 +499,7 @@
                 <img src="image/panierpetit.png" alt="petit panier"/>
                 <p> <span class="nomProd">Petit panier</span> </br><span class="prixProd">20</span><span class="unit">€</span></p>
                 <div class="details">
-                        <form id="Petitpanier" class="legPanier">
+                        <form class="legPanier">
                             <input type="number" name="qtt" min="0" max="10" default="0">
                             <button type="button" onclick="goPanier('pr1');"></button>
                         </form>
@@ -509,10 +509,10 @@
 
             <div class="panierL" id="pr2">
                 
-                <img src="image/paniermoy.png" alt="petit panier" />
+                <img src="image/paniermoy.png" alt="panier moyen" />
                 <p><span class="nomProd">Panier moyen</span> </br><span class="prixProd">25</span><span class="unit">€</span></p>
                 <div class="details">
-                        <form class="legPanier" id="Moyen panier"><input type="number" name="qtt" min="0" max="10" default="0">
+                        <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                             <button type="button" onclick="goPanier('pr2');"></button>
                         </form>
                        
@@ -521,10 +521,10 @@
 
             <div class="panierL" id="pr3">
                    
-                <img src="image/paniergrand.png" alt="petit panier" />
+                <img src="image/paniergrand.png" alt="grand panier" />
                 <p><span class="nomProd">Grand panier</span> </br><span class="prixProd">35</span><span class="unit">€</span></p>
                 <div class="details">
-                        <form class="legPanier" id="Grand panier"><input type="number" name="qtt" min="0" max="10" default="0">
+                        <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                             <button type="button" onclick="goPanier('pr3');"></button>
                         </form>
                        
@@ -532,22 +532,22 @@
             </div>
             <div class="panierL">
                
-                <img src="image/legumesP.png" alt="légumes au choix" />
+                <img src="image/legumes.png" alt="légumes au choix" />
                 <p><strong>À la carte</strong></p>
                 <img id="flechelegume"src="image/fleche.png" alt="fleche" />
                 
             </div>
         </div>
         <h3>Nos légumes de la semaine</h3>
-        <div class="legumessemaine">
+        <div class="legumesSemaine">
         
             <div class="legume" id="pr4">
                 <div class="fondlegume">
                     <img src="image/betteraveV.jpg" alt="betterave"/></div>
                     <div class=description>
-                        <p><span class="nomProd">Betterave</span> </br><span class="prixProd">1.5</span><span class="unit">€</span></p>
+                        <p><span class="nomProd">Betterave</span> </br><span class="prixProd">4</span><span class="unit">€/kg</span></p>
                                                 
-                        <form class="legPanier" id="Betterave">
+                        <form class="legPanier">
                             <input type="number" name="qtt" min="0" max="10" default="0">
                             <button type="button" onclick="goPanier('pr4');"></button>
                         </form>
@@ -570,7 +570,7 @@
                 <img src="image/brocoliV.png" alt="brocoli" /></div>
                 <div class=description>
                     <p><span class="nomProd">Brocoli</span> </br><span class="prixProd">3</span><span class="unit">€/bouquet</span></p>
-                    <form class="legPanier" id="Brocoli"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr6');"></button></form>
                    
                 </div>
@@ -580,8 +580,8 @@
                     <div class="fondlegume">
                 <img src="image/carottesv.jpg" alt="carotte" /></div>
                 <div class=description>
-                    <p><span class="nomProd">Carotte</span> </br><span class="prixProd">1.5</span><span class="unit">€/kg</span></p>
-                    <form class="legPanier" id="Carotte"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <p><span class="nomProd">Carotte</span> </br><span class="prixProd">2.5</span><span class="unit">€/kg</span></p>
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr7');"></button></form>
                     
                 </div>
@@ -591,17 +591,17 @@
                 <img src="image/celeriraveV.jpg" alt="Celeri" /></div>
                 <div class=description>
                     <p><span class="nomProd">Céleri</span> </br><span class="prixProd">2</span><span class="unit">€/pièce</span></p>
-                    <form class="legPanier" id="Celeri"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr8');"></button></form>
                     
                 </div>
             </div>
             <div class="legume"  id="pr9">
                     <div class="fondlegume">
-                <img src="image/chouraveV.jpg" alt="Chouxrave" /></div>
+                <img src="image/chouraveV.jpg" alt="Choux-raves" /></div>
                 <div class=description>
-                    <p><span class="nomProd">Chou-rave</span> </br><span class="prixProd">1</span><span class="unit">€/pièce</span></p>
-                    <form  class="legPanier" id="chourave"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <p><span class="nomProd">Chou-rave</span> </br><span class="prixProd">1.5</span><span class="unit">€/pièce</span></p>
+                    <form  class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr9');"></button></form>
                     
                 </div>
@@ -611,7 +611,7 @@
                 <img src="image/cibouletteV.jpg" alt="ciboulette" /></div>
                 <div class=description>
                     <p><span class="nomProd">Ciboulette</span> </br><span class="prixProd">2</span><span class="unit">€/bouquet</span></p>
-                    <form class="legPanier" id="Ciboulette"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr10');"></button></form>
                    
                 </div>
@@ -624,7 +624,7 @@
                     </br>
                     <span class="prixProd">4</span>
                     <span class="unit">€/pièce</span></p>
-                    <form class="legPanier" id="Courge spagetti"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr11');"></button></form>
                    
                 </div>
@@ -634,7 +634,7 @@
                 <img src="image/macheV.jpg" alt="mache" /></div>
                 <div class=description>
                     <p><span class="nomProd">Mâche</span> </br><span class="prixProd">1</span><span class="unit">€/250g</span></p>
-                    <form class="legPanier" id="mache"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr12');"></button></form>
                     
                 </div>
@@ -645,7 +645,7 @@
                 <img src="image/patidouV.jpg" alt="Patidou" /></div>
                 <div class=description>
                     <p><span class="nomProd">Patidou</span> </br><span class="prixProd">3</span><span class="unit">€/pièce</span></p>
-                    <form  class="legPanier" id="patidou"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <form  class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr13');"></button></form>
                     
                 </div>
@@ -654,8 +654,8 @@
                     <div class="fondlegume">
                 <img src="image/poireauV.jpg" alt="poireau" /></div>
                 <div class=description>
-                    <p><span class="nomProd">Poireau</span> </br><span class="prixProd">3.5</span><span class="unit">€/pièce</span></p>
-                    <form class="legPanier" id="poireau"><input type="number" name="qtt" min="0" max="10" default="0">
+                    <p><span class="nomProd">Poireau</span> </br><span class="prixProd">3</span><span class="unit">€/pièce</span></p>
+                    <form class="legPanier"><input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr14');"></button></form>
                    
                 </div>
@@ -666,7 +666,7 @@
                 </div>
                 <div class=description>
                     <p><span class="nomProd">Romarin</span> </br><span class="prixProd">2</span><span class="unit">€/bouquet</span></p>
-                    <form class="legPanier" id="romarin">
+                    <form class="legPanier">
                         <input type="number" name="qtt" min="0" max="10" default="0">
                         <button type="button" onclick="goPanier('pr15');"></button>
                     </form>
@@ -683,19 +683,19 @@
             
             </div>
         </section>
-<section>
-        <form name="comPanier" method="post" class="commandForm">
-                  <p>
+<section id="commande">
+        <form name="comPanier" method="post">
+                  
                     <h3>Coordonnées</h3>
-                    Nom : <input type="text" name="nom" onblur="verifName()" />
+                    <input type="text" name="nom" onblur="verifName()" placeholder="Nom" class="formField"/>
                     <br />
-                    E-mail : <input type="text" name="email" size="30" onblur="verifMail()" />
+                    <input type="text" name="tel" size="10" onblur="verifTel()" placeholder="Téléphone" class="formField"/>
                     <br />
-                    Téléphone : <input type="text" name="tel" size="10" onblur="verifTel()" />
-                  </p>
-                  <p>
+                   <input type="text" name="email" size="30" onblur="verifMail()" placeholder="E-mail" class="formField"/>
+                    
+
                     <h3>Point de collecte</h3>
-                    <select name="depot" size=1 onchange="verifDepot()">
+                    <select name="depot" size=1 onchange="verifDepot()"  class="formField">
                       <option value="default">Choisissez votre point de collecte</option>
                       <option value="Mel'égumes">Au potager de Mel'égumes</option>
                       <option value="Pain Perdu">Le Pain Perdu</option>
@@ -703,18 +703,34 @@
                       <option value="All Cook">All Cook</option>
                     </select>
             
-                    <select name="dateLiv" id="dateL">
+                    <select name="dateLiv" id="dateL"  class="formField">
                         <option value="default">Choisissez la date de votre collecte</option>
                       <option value="date1">mardi de 18h30 à 20h</option>
                       <option value="date2">vendredi de 18h30 à 20h</option>
                       <option value="date3">samedi de 10h à 14h</option>
                     </select>
-                  </p>
-             
-    <div class="btn">
-        <!-- <input class="btn__link formBtn" type="button"  value="" name="dsubmit" onclick="getCommande();" /> -->
-        <a class="btn__link formBtn" type="button" name="dsubmit" onclick="getCommande();"><span class="texteBtn">Commander</span></a>
-    </div>
+  
+            
+              
+<!--<h3>Récapitulatif</h3>
+
+        
+        <input type="text" name="mailData" value=mailData>
+        
+        <input type="text" name="nameData" value=nameData>
+        
+        <input type="text" name="telData" value=telData>
+        
+        <input type="text" name="depotData" value=depotData>
+        <br><br>
+        <button>
+        Send
+        </button>
+       
+   -->     
+        <div class="btn">
+            <input class="btn__link formBtn" type="button"  value="Commander" name="dsubmit" onclick="getCommande();" />
+        </div>
 </form>
 
     </section>
@@ -732,23 +748,21 @@
                 <h4>Permanences</h4>
                 <p>Du lundi au vendredi<br> de 9h30 à 13h00
                     <br><span>OU</span><br>
-                    Sur <a href="#" class="footerLink">rendez-vous</a></p>
+                    Sur <a href="#" id="rdv">rendez-vous</a></p>
             </div>
 
-            <div class="socialMedia">
-                <h4>Suivez-nous !</h4>
-                <a class ="footerLink" href="https://www.facebook.com/M%C3%A9l%C3%A9gumes-1118822338164204/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a class="footerLink" href="https://www.instagram.com/mel.egumes/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+            <div class="fb-page" data-href="https://www.facebook.com/Mélégumes-1118822338164204/?epa=SEARCH_BOX"
+                data-width="250" data-height="300" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true"></div>
 
             <div>
                 <div id="adresse">
                     <h4>Adresse</h4>
-                    <p>Avenue de la joyeuse entrée, 13<br>7020 Nimy <br>0474/47.46.73<br><a
-                            href="mailto:melegumes@gmail.com" class="footerLink">melanie-depaul@hotmail.com</a></p>
+                    <p>Avenue de la joyeuse entrée, 23<br>7020 Nimy <br>0475/12.32.48<br><a
+                            href="mailto:melegumes@gmail.com" id="mail">melegumes@gmail.com</a></p>
                 </div>
             </div>
-            <p id="copyright">Copyright Mél'égumes 2019 © - <a href="legal.html" class="legalLink">Conditions d'utilisation du site web</a></p>
+            <p id="copyright">Copyright Mél'égumes 2019 ©</p>
         </div>
 
     </footer>

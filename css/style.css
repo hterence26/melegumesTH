@@ -1222,25 +1222,25 @@ article li{
     background-position-y: -15em;
 }
 
-#evasion{
+.evasion{
     display:flex;
     /* align-content:space-between; */
     align-items:center;
    /* margin:70px 0; */
 }
 
-#evasion div{
+.evasion div{
     width:40%;
     margin:50px auto;
 }
 
-#evasion img{
+.evasion img{
     width:100%;
 }
 
-#integration img{
+.integration img{
     display:block;
-    width:50%;
+    max-width:50%;
     margin: 0 auto;
 }
 
@@ -2631,7 +2631,7 @@ article li{
     }
       
     #chezvous{
-        height:100%
+        height:100%;
     }
 
     /* ----------------------- Page Découvrir ----------------------- */
@@ -2694,11 +2694,11 @@ article li{
         margin-bottom:10px;
     }
 
-    #evasion{
+    .evasion{
         flex-direction: column;
     }
 
-    #evasion div{
+    .evasion div{
         width:80%;
         margin:10px auto;
     }
@@ -2737,7 +2737,6 @@ article li{
 
     .legume{
         width: 40%;
-       
         }
 
     .choixtype{
