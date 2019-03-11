@@ -1041,7 +1041,7 @@ iframe{
     display: inline-block;
     width: 300px;
     margin:0 auto; 
-    background: url(..//image/1x/post.png);
+    background: url(..//image/post.png);
     height:300px;
     background-repeat: no-repeat;
     position: relative;
@@ -1222,7 +1222,7 @@ article li{
 
 
 #collab{
-    background-image: url(../image/OB82100.jpg);
+    background-image: url(../image/collab.jpg);
     background-position-y: -15em;
 }
 
