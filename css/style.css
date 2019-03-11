@@ -698,7 +698,7 @@ footer p{
     box-shadow: #70c7c7 10px 10px;
     z-index:30;
     margin-left:15%;
-    background-position-x: -4em
+    background-position-x: -5em
 }
 
 .btnClassic--commander p{
@@ -706,13 +706,13 @@ footer p{
 }
 
 .btnClassic--cueillette{
-    background-image: url(../image/venirCueillir.jpg);
+    background-image: url(../image/venirCueillir.png);
     background-size: cover;
     border-radius:2px;
     box-shadow: #eb8521 10px 10px;
     z-index:30;
     margin-right:15%;
-    background-position-x: -3em;
+    background-position-x: -7em;
 }
 
 .btnClassic--cueillette p{
@@ -2055,6 +2055,13 @@ article li{
         padding: 0.5em;
     }
 
+    .btnClassic--commander{
+        margin-left:5%;
+    }
+
+    .btnClassic--cueillette{
+        margin-right:5%;
+    }
     
 
 
@@ -2542,7 +2549,13 @@ article li{
         line-height: 1em;
     }
 
+    .btnClassic.btnClassic--commander{
+        background-position:-7em 0;
+    }
 
+    .btnClassic.btnClassic--cueillette{
+        background-position:-15em 0;
+    }
 
 
 
