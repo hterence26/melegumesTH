@@ -39,6 +39,94 @@ let prod = [
 			"unit":"€/kg",
 			"imgSrc":"image/betteraveChioggaV.jpg",
 			"altSrc":"betterave chiogga"
+		},
+		{
+            "id":"pr5",
+            "nomProd":"Bette",
+			"prixProd":3,
+			"unit":"€/kg",
+			"imgSrc":"image/betteV.jpg",
+			"altSrc":"bette"
+		},
+		{
+            "id":"pr6",
+            "nomProd":"Brocoli",
+			"prixProd":3,
+			"unit":"€/bouquet",
+			"imgSrc":"image/brocoliV.jpg",
+			"altSrc":"brocoli"
+		},
+		{
+            "id":"pr7",
+            "nomProd":"Carottes",
+			"prixProd":2.5,
+			"unit":"€/kg",
+			"imgSrc":"image/carottesv.jpg",
+			"altSrc":"Carottes"
+		},
+		{
+            "id":"pr8",
+            "nomProd":"Céleri-rave",
+			"prixProd":2,
+			"unit":"€/pièce",
+			"imgSrc":"image/celeriraveV.jpg",
+			"altSrc":"Céleri-rave"
+		},
+		{
+            "id":"pr9",
+            "nomProd":"Chou-rave",
+			"prixProd":1.5,
+			"unit":"€/pièce",
+			"imgSrc":"image/chouraveV.jpg",
+			"altSrc":"Chou-rave"
+		},
+		{
+            "id":"pr10",
+            "nomProd":"Ciboulette",
+			"prixProd":2,
+			"unit":"€/bouquet",
+			"imgSrc":"image/cibouletteV.jpg",
+			"altSrc":"Ciboulette"
+		},
+		{
+            "id":"pr11",
+            "nomProd":"Courge Spaghetti",
+			"prixProd":4,
+			"unit":"€/pièce",
+			"imgSrc":"image/courgeSpaghettiV.png",
+			"altSrc":"Courge Spaghetti"
+		},
+		{
+            "id":"pr12",
+            "nomProd":"Mâche",
+			"prixProd":1.8,
+			"unit":"€/250g",
+			"imgSrc":"image/macheV.jpg",
+			"altSrc":"Mâche"
+		},
+		{
+            "id":"pr13",
+            "nomProd":"Patidou",
+			"prixProd":3,
+			"unit":"€/pièce",
+			"imgSrc":"image/patidouV.jpg",
+			"altSrc":"Courge Patidou"
+		},
+		{
+            "id":"pr14",
+            "nomProd":"Poireau",
+			"prixProd":3,
+			"unit":"€/kg",
+			"imgSrc":"image/poireauV.jpg",
+			"altSrc":"Poireaux"
+		},
+		{
+            "id":"pr15",
+            "nomProd":"Romarin",
+			"prixProd":2,
+			"unit":"€/bouquet",
+			"imgSrc":"image/romarinV.jpg",
+			"altSrc":"Romarin"
 		}
 	];
 
