@@ -1222,8 +1222,8 @@ article li{
 
 
 #collab{
-    background-image: url(../image/collab.jpg);
-    background-position-y: -300px;
+    background-image: url(../image/OB82100.jpg);
+    background-position-y: -15em;
 }
 
 #evasion{
@@ -1697,7 +1697,11 @@ article li{
 
 @media all and (max-width: 1430px){
     #mercure{
-        background-position-y:-10em;
+        background-position-y:-8em;
+    }
+
+    #collab{
+        background-position-y: -11em;
     }
 }
 
@@ -1776,9 +1780,13 @@ article li{
             display:none;
         }
 
-        .presentation>div{
-            margin: 0 auto;
-        }
+    .presentation>div{
+        margin: 0 auto;
+    }
+
+    #collab{
+        background-position-y: -6em;
+    }
 
     /* ----------------------- Page Contact ----------------------- */
 
@@ -1994,7 +2002,7 @@ article li{
     }
 
     #mercure{
-        background-position-y: -7em;
+        background-position-y: -6em;
     }
 
     .mercure img{
@@ -2231,6 +2239,10 @@ article li{
         background-position-y: 0.1em;
     }
 
+    #collab{
+        background-position-y: -7em;
+    }
+
     .projetsList{
         flex-wrap: wrap;
     }
@@ -2333,6 +2345,17 @@ article li{
 
 
 
+
+
+@media all and (max-width:750px){
+    #mercure{
+        background-position-y: -2em;
+    }
+
+    #collab{
+        background-position-y: -2em;
+    }
+}
 
 
 
@@ -2453,8 +2476,7 @@ article li{
     }
 
     .mercure img{
-        display:block;
-        margin:30px auto 0;
+        display:none;
     }
 
 
@@ -2679,9 +2701,8 @@ article li{
         margin:10px auto;
     }
 
-    #collab{
-        background-position-y: -100px;
-    }
+
+    
 
 
 
