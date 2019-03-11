@@ -1,0 +1,868 @@
+/* Partie commune à toutes les pages */
+
+html{
+    box-sizing:border-box;
+    font-size:20px; /* 1em = 20px */
+    line-height:30px;
+    font-family:'Raleway', sans-serif;
+    color: #005454;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:7em 0 0 0;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    z-index:5000;
+    background-color: white;
+}
+
+svg{
+    padding-top:5px;
+    height:6em;
+    transition: 0.3s ease;
+}
+
+header .st0{fill:#057B3B;}
+header .st1{fill:#137C3E;}
+header .st2{fill:#E69237;}
+header .st3{fill:#B7CE3C;}
+header .st4{fill:#48A035;}
+
+nav{
+    width:75%;
+    height:7em;
+    display:flex;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+
+
+header > div{ /* Biseau du Header */
+    content:"";
+    position:fixed;
+    top:0;
+    left:200px;
+    width:100%;
+    border-style:solid;
+    border-color:transparent transparent #0fa3a3 transparent;
+    border-width:0px 0px 7em 50px;
+    transition: 0.3s ease;
+  }
+
+.menuNavigation {
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    font-family: 'Amatic SC', cursive;
+    font-weight:bold;
+    width:95%;
+    z-index:1000;
+    font-size:1.3em;
+    margin:8px 0 0;
+}
+
+.menuNavigation>li>a{
+    text-decoration:none;
+    color:white;
+    transition:all .3s ease;
+}
+
+.menuNavigation>li>a:hover, #toggleButton i:hover{
+    color:#fae3a3;
+}
+
+#orderNow{
+    text-align:center;
+    padding:10px 30px;
+    background-color: #E69237;
+    border-radius:5px;
+    margin:3px;
+}
+
+#orderNow:hover{
+    color:black;
+    margin:0;
+    padding:13px 33px;
+}
+
+#orderNowMobile{
+    display:none;
+}
+
+.sousnav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:5.2em;
+    display:flex;
+    height:2em;
+    justify-content: space-around;
+    align-content:center;
+    background-color: #70c7c7;
+    list-style: none;
+    padding:0 25vw;
+    transition:all .3s ease;
+}
+
+.sousnav li{
+    display:flex;
+    text-align:center;
+    font-family: 'Coming Soon', cursive;
+    font-size:0.6em;
+}
+
+.sousnav li a{
+    align-self:center;
+    text-decoration:none;
+    color:#005454;
+    line-height:2em;
+    width:15vw;
+    transition:all .2s ease;
+}
+
+.sousnav a:hover{
+    color:white;
+}
+
+/* Bouton menu Hamburger */
+#toggleButton{ 
+    font-family: 'Amatic SC', cursive;
+    /* font-weight:bold; */
+    font-size:2em;
+    color: white;
+    position: relative;
+    z-index: 1001;
+    align-items:center;
+    justify-content:flex-end;
+    margin-right:0.5em; 
+    display: none;
+    height:1.7em;
+    cursor: pointer;
+} 
+
+/* Classes animation nav */
+.menuSmall{
+    height:3em;
+    margin-left:10px;
+}
+
+.menuHeight{
+    border-width:0 0 3.8em 25px;
+    left:120px;
+}
+.sousnavHeight{
+    position:absolute;
+    top:2.8em;
+    height:1.8em;
+}
+/* Fin des classes animation */
+
+.cover{
+    width:100%;
+    height:23em;
+    background-size: cover;
+    background-position-y: -1em;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.coverTitle {
+    font-family:'Coming Soon', cursive;
+    position:relative;
+    font-size:1.5em;
+    float:left;
+    padding-left:0.5em; 
+    z-index:100;
+    bottom:-2.7em;
+}
+
+.biseauCover{
+    z-index:90;
+    position:absolute;
+    bottom:3.52em;
+    right:0;
+    width:35%;
+    border-style:solid;
+    border-color:transparent transparent #f5ba17 transparent;
+    border-width:0px 0px 3em 20px;
+}
+
+section{
+    max-width:1048px;
+    margin:3em auto;
+    padding:0 5%;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.3em;
+    text-align:center;
+    line-height:1.2em;
+}
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-align:center;
+    line-height:1.2em;
+}
+
+footer{
+    margin:150px 0 0;
+    padding:0;
+    width:100%;
+    height:38em;
+    position:relative;
+    background-image: url(../image/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    overflow: hidden;
+    text-align:center;
+}
+
+footer svg{
+    width:100vw;
+    height:100%;
+}
+
+#arrowup{
+    width:40px;
+    position:relative;
+    z-index:1000;
+}
+
+#arrowup:hover {
+    animation: ArrowUp 0.5s forwards;
+}
+
+@keyframes ArrowUp {
+    0% {
+        bottom:0;
+    }
+    25% {
+        bottom:5px;
+    }
+    50%{
+        bottom:0;
+    }
+    75% {
+       bottom:5px
+    }
+    100% {
+        bottom:0;
+    }
+}
+
+#orgaFooter{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    max-width: 1048px;
+    height:100%;
+    margin:0 auto;
+    padding:50px 0 0;
+    text-align:center;
+    color:white;
+}
+
+#orgaFooter>div{
+    width:30%;
+}
+
+footer h4{
+    font-size: 1.3em;
+}
+
+footer #rdv, #mail{
+    display:inline;
+    color:#005454;
+    text-decoration:none;
+    transition:all ease-in-out 0.2s;
+}
+
+footer p{
+    text-align:center;
+}
+
+footer #rdv:hover, footer #mail:hover{
+    color:#fad673;
+}
+
+#copyright{
+    font-size:0.6em;
+    color:white;
+    position:absolute;
+    bottom:10px;
+    display:block;
+    margin: auto;
+}
+
+.fb-page{
+    opacity:0.9;
+    margin:0 auto;
+}
+
+/* Fin de la partie commune */
+
+#commandeLegumes{ /* Changer la classe et l'image de couverture */
+    background-image: url(../image/laitue.jpg);
+}
+
+/*Bouton*/
+.btn{
+    position: relative;
+    text-align: center;
+    margin-bottom: 6em;
+  
+  }
+  
+    .btn__link {
+      background: url(../image/sprite.png);
+      background-position:5px 0px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      font-family:'Coming Soon', cursive;
+      text-decoration: none;
+      transition: padding 0.1s, top 0.2s;
+      padding: 1em 0 0 0;
+      color: #005454;
+      width: 220px;
+      height: 60px;
+   }
+  
+    .btn__link:hover {
+      color: #0fa3a3;
+      background-position:6px -107px;
+    }
+  
+    .btn__link:active {
+      color: #70c7c7;
+      background-position: 5px -205px;
+    }
+  
+  .texteBtn{
+    position: relative;
+    padding: 2em;
+    display: block;
+   
+    top: -2em;
+    left:-1.5em;
+  
+    }
+  
+    .texteBtn:active{
+      top:-1.7em;
+    }
+
+    .formBtn{
+        background-color: transparent;
+        font-family: "Coming Soon", "Raleway", sans-serif;
+        border: none;
+        color: #005454;
+        padding: 1em 2em;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 1em;
+        position: relative;
+        top: -1em;
+
+    }
+
+    .formBtn:active{
+    color: #70c7c7;
+    top: -0.8em;
+    }
+
+    .formBtn:hover{
+        color: #70c7c7;
+        cursor: pointer;
+    }
+
+    /*fin Bouton*/
+
+/*code page commande*/
+
+
+.choice{
+display: flex;
+align-items: flex-start;
+flex-wrap: nowrap;
+justify-content: space-between;
+  height: 100%;
+  margin: 4em 0;
+}
+
+.panierL{
+    width: 23%;
+    text-align: center;
+}
+
+
+#flechelegume{
+    position: relative;
+    top:0.8em;
+}
+
+.panierL img:first-child{
+    width: 100%  ;
+    text-align: center;
+}
+
+
+#manqueespace{
+    padding-right: 0.5em;
+}
+
+.choix p {
+    text-align: center;
+}
+.nomProd{
+    font-weight:bold;
+}
+
+/*.legume strong {
+    font-size: 1.3em;
+    text-align: center;
+      }
+*/
+
+h3{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    text-align:center;
+    line-height:1.2em;
+}
+
+.legumesSemaine{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+
+height: 100%;
+}
+.legume{
+    width: 28%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    }
+
+
+.fondlegume{
+    background-color: #F6B917;
+
+ text-align: center;
+
+}
+
+.fondlegume img{
+    width: 100%;
+    position: relative;
+    top:0.5em;
+    left :0.5em;
+}
+
+.description{
+    text-align: center;
+}
+
+input{
+    margin: auto;
+}
+.legPanier input{
+    box-sizing: border-box;
+    width:5em;
+    height: 2em;
+    vertical-align: middle;
+    border: 1px solid #005555;
+    border-radius: 4px;
+    font-size: 1em;
+    background: url('../image/panierI.png') transparent no-repeat left top;
+    background-size: 0.9em 0.9em;
+    background-position: 0.5em 0.5em;
+    padding : 0.1em 0.1em 0.1em 2em;
+  
+}
+.legPanier button{
+    border: none;    
+    background: transparent url(../image/plusB2.png) no-repeat center;
+    cursor:pointer;
+    width: 2.2em;
+    height: 2.2em;
+    vertical-align: middle;  
+    border-radius : 4px;
+}
+
+.legPanier button:hover{
+    background: transparent url(../image/plusB2H.png) no-repeat center;
+    
+}
+.legPanier button:active{
+    background: transparent url(../image/plusB2A.png) right no-repeat;
+    
+}
+
+.btn{
+    margin-top: 4em;
+}
+.details{
+    text-align: center;
+}
+
+
+/* table commande */
+#listePanier{
+    display : flex;
+    justify-content: center;
+    
+}
+#tbPanier {
+    
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+#tbPanier td, #tbPanier th{
+    border-bottom: 1px solid #005454;
+    padding: 8px;
+    text-align:center;
+  }
+  
+  #tbPanier tr:nth-child(even){background-color: #9fdada;}
+  
+  #tbPanier tr:hover {background-color: #fbe3a2;}
+  
+  #tbPanier th {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    background-color: #0fa3a3;
+    color: white;
+  }
+
+  #totalPanier{
+      width:80%;
+      text-align:center;
+  }
+  #totalPanier td {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    background-color: #EB8522;
+    color: white;
+    font-weight: bold;
+    border-bottom: none;
+
+      }
+/* FIN Table Commande */
+
+/* DEBUT formulaire Commande */
+#commande{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;   
+}
+
+#commande form{
+    text-align: center;
+}
+
+
+.formField{
+    width:80%;
+    margin:0.2em 0;
+    border-radius:5px;
+    padding: 0.3em;
+    font-size:0.8em;
+    font-family:'Raleway', sans-serif;
+    border: 2px solid #E69237;
+}
+
+
+/* FIN formulaire Commande */
+
+/* Début des Mediaqueries */
+
+@media all and (max-width: 1048px){
+    nav{
+        width:85%;
+    }
+
+    #orderNow{
+        padding:10px 20px;
+    }
+
+    #orderNow:hover{
+        color:black;
+        margin:0;
+        padding:13px 23px;
+    }
+
+    #commandeLegume{ /* Changer le # */
+        background-position:0 -5em ;
+    }
+
+    .panierL p{
+            margin: 0;
+    }
+
+}
+
+
+
+@media all and (max-width: 950px){
+
+    /* Partie commune 950px */
+    html{
+        font-size:18px;
+    }
+    body{
+        padding:3.4em 0 0;
+    }
+
+    #toggleButton{
+        display:flex;
+        transition: all 0.3s ease;
+    }
+
+    .biseauCover{
+        width: 55%;
+        bottom:2em;             
+    }
+
+    svg{
+        height:3em;
+        margin-left:10px;
+    }
+
+    nav{
+        display: block;
+        width: 100%;
+        height:3.8em;
+        margin-left:10px;
+    }
+    
+    .menuSmall{
+        height:3em;
+        margin-left:10px;
+    }
+    
+    .menuHeight{
+        border-width:0 0 3.8em 25px;
+        left:100px;
+    }
+
+    header>div{
+        border-width:0 0 3.82em 25px;
+        left:100px;
+    }
+
+    nav ul{
+        display:none;
+        list-style:none;
+        width: 100vw;
+        float: right;
+        padding: 0;
+        z-index: 10000;
+    }
+
+    .menuNavigation{
+        display: none;
+    }
+
+    .menuNavigation.is-opened {
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        top:2.8em;
+        left:0;
+        right:0;
+        margin:0;
+    }
+
+    
+    .menuNavigation a{
+        display:block;
+        transition:all .5s ease;
+        text-align:center;
+        background-color: #70c7c7;
+        padding: 1em;
+        width:100%;
+    }
+
+    .menuNavigation>li>a:hover{
+        background-color:#0fa3a3; 
+        transition:all .5s;
+    }
+
+
+    #orderNow{
+        display:none;
+    }
+
+    #orderNowMobile{
+        display:block;
+        position:fixed;
+        top:10px;
+        right:80px;
+        width:170px;
+        height:50px;
+        border-radius:5px;
+        background-color:#eb8521 ;
+        z-index:6000;
+        color:white;
+        font-family: 'Amatic SC', cursive;
+        line-height:50px;
+        text-align:center;
+        text-decoration:none;
+        font-size:1.5em;
+    }
+
+    .cover{
+        height:18em;
+        background-position-y: -5em;
+    }
+
+    .coverTitle{
+        font-size:1.4em;
+    }
+
+    .fcbk{
+        display:none;
+    }
+
+    footer{
+        margin:75px 0 0;
+    }
+
+    #orgaFooter>div{
+        width:50%;
+    }
+    /* Fin partie commune 950px */
+    
+    .legume{
+        width: 38%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        }
+
+
+    #commandeLegumes{ /* changer le # */
+        background-position:0 -1em ;
+    }
+  
+    .panierL{
+        width: 25%;
+    }
+
+
+.panierL input{
+    margin-top: 1em;
+}
+}
+
+
+
+    
+    @media all and (max-width: 550px){
+
+         /* Partie commune 550px */
+    html{
+        font-size:16px;
+    }
+
+    body{
+        padding:3em 0 0;
+    }
+
+    #toggleButton{
+        display:flex;
+        transition: all 0.3s ease;
+    }
+
+    svg{
+        height:3em;
+        margin-left: 10px;
+    }
+
+    nav{
+        display: block;
+        width: 100%;
+        height:3em;
+        margin-left:10px;
+    }
+
+    header{
+        height:3.79em;
+    }
+
+    header>div{
+        border-width:0 0 3.8em 25px;
+        left:100px;
+    }
+
+    #orderNowMobile{
+        top:10px;
+        right:65px;
+        width:6em;
+        height:1.8em;
+        line-height:1.8em;
+        font-size:1.4em;
+    }
+
+    .cover{
+        height:15em;
+    }
+    
+    .biseauCover{
+        width: 70%;
+        bottom:2em;             
+    }
+
+    .coverTitle{
+        font-size:1.4em;
+    }
+
+    footer{
+        height:60em;
+        background-position-x: -560px;
+    }
+
+    #orgaFooter{
+        display:block;
+        padding-top:330px;
+    }
+
+    #orgaFooter>div{
+        margin:0 auto;
+    }
+
+    #copyright{
+        width:100%;
+    }
+    /* Fin partie commune 550px */
+    .legume{
+        width: 40%;
+       
+        }
+
+        .panierL{
+            width: 45%;
+            margin-bottom: 2em;
+        }
+
+        .choix{
+            flex-wrap: wrap;
+        }
+        
+       
+}
+

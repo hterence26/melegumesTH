@@ -4,6 +4,49 @@ const tab = console.table;
 /* const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
  */
+
+// créer array Commande
+let prod = [
+	       {
+            "id":"pr1",
+            "nomProd":"Petit panier",
+			"prixProd":20,
+			"unit":"€/panier",
+			"imgSrc":"image/panierpetit.png",
+			"altSrc":"petit panier"
+		},
+		{
+            "id":"pr2",
+            "nomProd":"Panier moyen",
+			"prixProd":25,
+			"unit":"€/panier",
+			"imgSrc":"image/paniermoy.png",
+			"altSrc":"panier moyen"
+		},
+		{
+            "id":"pr3",
+            "nomProd":"Grand panier",
+			"prixProd":35,
+			"unit":"€/panier",
+			"imgSrc":"image/paniergrand.png",
+			"altSrc":"grand panier"
+		},
+	
+        {
+            "id":"pr4",
+            "nomProd":"Betterave",
+			"prixProd":4,
+			"unit":"€/kg",
+			"imgSrc":"image/betteraveChioggaV.jpg",
+			"altSrc":"betterave chiogga"
+		}
+	];
+
+log(prod);
+
+
+
+
 // créer tableau panier
 
 function createPanier() {
@@ -71,10 +114,28 @@ function goPanier(idForm) {
 
 
 	// récupère éléments de la commande
-	idProd = document.querySelector('#' + idForm);
-	log(idProd);
+	
+	let p;
+
+	for (let i=0; i< prod.length; i++) {
+		if (prod[i].id == idForm) {
+			p = i;
+			break;
+		}
+	}
+
+	let id=prod[p].id;
+	let idProd = document.querySelector('#' + idForm);
+	let nomProd=prod[p].nomProd;
+	let prixProd=prod[p].prixProd;
+	let unit=prod[p].unit;
+	let imgSrc=prod[p].imgSrc;
+	let altSrc=prod[p].altSrc;
+			
+	/*idPrd = document.querySelector('#' + idForm);
+	log(idPrd);
 	nomProd = idProd.getElementsByClassName("nomProd")[0].innerHTML;
-	prixProd = idProd.getElementsByClassName("prixProd")[0].innerHTML;
+	prixProd = idProd.getElementsByClassName("prixProd")[0].innerHTML;*/
 	qttProd = idProd.getElementsByClassName("legPanier")[0].elements[0].value;
 	totalProd = prixProd * qttProd;
 	txtCom = [nomProd, prixProd, qttProd, totalProd, '-'];
@@ -97,7 +158,7 @@ function goPanier(idForm) {
 
 	// creating all cells
 	var tblBody = document.getElementById("bodyPanier");
-	var trTotal = document.getElementById("totalPanier"); 
+	 
 
 	for (var i = 0; i < 1; i++) {
 		// creates a table row
@@ -117,8 +178,8 @@ function goPanier(idForm) {
 
 		// add the row to the end of the table body
 		tblBody.appendChild(row);
-		
-		trTotal.rows[0].cells[1].innerHTML = totalProd;
+		var x = document.querySelectorAll("#totalPanier td");
+		x[1].innerHTML =parseFloat(x[1].innerHTML) + parseFloat(totalProd);
 	}
 }
 };
