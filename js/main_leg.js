@@ -220,10 +220,7 @@ function goPanier(idForm) {
 	let imgSrc=prod[p].imgSrc;
 	let altSrc=prod[p].altSrc;
 			
-	/*idPrd = document.querySelector('#' + idForm);
-	log(idPrd);
-	nomProd = idProd.getElementsByClassName("nomProd")[0].innerHTML;
-	prixProd = idProd.getElementsByClassName("prixProd")[0].innerHTML;*/
+	
 	qttProd = idProd.getElementsByClassName("legPanier")[0].elements[0].value;
 	totalProd = prixProd * qttProd;
 	txtCom = [nomProd, prixProd, qttProd, totalProd, '-'];
@@ -266,6 +263,8 @@ function goPanier(idForm) {
 
 		// add the row to the end of the table body
 		tblBody.appendChild(row);
+
+		// total incrementation
 		var x = document.querySelectorAll("#totalPanier td");
 		x[1].innerHTML =parseFloat(x[1].innerHTML) + parseFloat(totalProd);
 	}
