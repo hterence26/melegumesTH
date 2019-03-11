@@ -319,7 +319,7 @@ footer p{
 }
 
 .legalLink{
-    color:#E69237;
+    color:white;
 }
 
 .textLink{
@@ -497,7 +497,7 @@ footer p{
 }
 
 .btnClassic--legumes{
-    background-image: url(../image/legumes.png);
+    background-image: url(../image/legumes.jpg);
     background-size: cover;
     border-radius:2px;
     box-shadow: #eb8521 15px 15px;
@@ -506,15 +506,13 @@ footer p{
 .btnClassic--activites{
     background-image: url(../image/activites.jpg);
     background-size: cover;
-    background-position: -5em 0;
     border-radius:2px;
     box-shadow: #fad673 15px 15px;
     z-index:30;
 }
 .btnClassic--decouvrir{
-    background-image: url(../image/decouvrir.png);
+    background-image: url(../image/decouvrir.jpg);
     background-size: cover;
-    background-position: -2em 0;
     border-radius:2px;
     box-shadow: #70c7c7 15px 15px;
     z-index:30;
@@ -698,7 +696,6 @@ footer p{
     box-shadow: #70c7c7 10px 10px;
     z-index:30;
     margin-left:15%;
-    background-position-x: -5em
 }
 
 .btnClassic--commander p{
@@ -712,7 +709,6 @@ footer p{
     box-shadow: #eb8521 10px 10px;
     z-index:30;
     margin-right:15%;
-    background-position-x: -7em;
 }
 
 .btnClassic--cueillette p{
@@ -2548,14 +2544,7 @@ article li{
     .fName{
         line-height: 1em;
     }
-
-    .btnClassic.btnClassic--commander{
-        background-position:-7em 0;
-    }
-
-    .btnClassic.btnClassic--cueillette{
-        background-position:-15em 0;
-    }
+    
 
 
 
