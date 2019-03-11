@@ -1226,23 +1226,23 @@ article li{
     background-position-y: -300px;
 }
 
-#evasion{
+.evasion{
     display:flex;
     /* align-content:space-between; */
     align-items:center;
    /* margin:70px 0; */
 }
 
-#evasion div{
+.evasion div{
     width:40%;
     margin:50px auto;
 }
 
-#evasion img{
+.evasion img{
     width:100%;
 }
 
-#integration img{
+.integration img{
     display:block;
     width:50%;
     margin: 0 auto;
@@ -2670,11 +2670,11 @@ article li{
         margin-bottom:10px;
     }
 
-    #evasion{
+    .evasion{
         flex-direction: column;
     }
 
-    #evasion div{
+    .evasion div{
         width:80%;
         margin:10px auto;
     }
