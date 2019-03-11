@@ -194,7 +194,7 @@ function createPanier() {
 
 // FIN tableau panier
 
-// ajout produits dans le tableau panier
+// DEBUT ajout produits dans le tableau panier
 
 
 
@@ -267,6 +267,9 @@ function goPanier(idForm) {
 		// total incrementation
 		var x = document.querySelectorAll("#totalPanier td");
 		x[1].innerHTML =parseFloat(x[1].innerHTML) + parseFloat(totalProd);
+
+		//cleanup cell text
+		idProd.getElementsByClassName("legPanier")[0].elements[0].value=0;
 	}
 }
 };
@@ -429,14 +432,23 @@ tab(template_params);
 		log("val",template_params);
 		emailjs.send(service_id, template_id, template_params);
 		alert(`Votre commande a bien été envoyée`);
+		
 		return true;
 	} else {
 		alert(`Un problème est survenu. Votre commande n'a pas été envoyée`);
 		return false;
 	};
+
+	
 };
 
+// DEBUT clean Panier
+/*function cleanPanier("tbPanier"){
+	var tbl = document.getElementById("tbPanier");
+        if(tbl) tbl.parentNode.removeChild(tbl);
+};*/
 
+// FIN clean Panier
  
 
 // FIN Bouton commander
