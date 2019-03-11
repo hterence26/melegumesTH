@@ -543,7 +543,7 @@ footer p{
 }
 
 #mercure{
-    background-image: url(../image/mercure.png);
+    background-image: url(../image/Mons1.jpg);
     background-position-y: -18em;
 }
 
@@ -1697,7 +1697,7 @@ article li{
 
 @media all and (max-width: 1430px){
     #mercure{
-        background-position-y:-13em;
+        background-position-y:-10em;
     }
 }
 
@@ -1734,7 +1734,7 @@ article li{
         background-position:0 -5em ;
     }
     #mercure{
-        background-position-y: -10em;
+        background-position-y: -5em;
     }
 
 
