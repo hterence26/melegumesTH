@@ -1342,6 +1342,8 @@ article li{
     font-size:1.8em;
 }
 
+
+
 .btn{
     position: relative;
     text-align: center;
@@ -1387,6 +1389,10 @@ article li{
     top:-1.7em;
 }
 
+.btn_contact {
+    top:2em;
+    align-self: center;
+}
 
 .contactPostIt{
     background-image: url(../image/postit1.svg);
@@ -2270,7 +2276,10 @@ article li{
     #contactForm{
         margin:0 auto;
         width:100%;
+       
     }
+
+    
 
     #mel, #peter{
         display:none;
