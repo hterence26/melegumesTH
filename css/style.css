@@ -1229,9 +1229,8 @@ article li{
 
 .evasion{
     display:flex;
-    /* align-content:space-between; */
     align-items:center;
-   /* margin:70px 0; */
+    position:relative;
 }
 
 .evasion div{
@@ -2310,6 +2309,21 @@ article li{
 
     #projets{
         background-position-y: 0.1em;;
+    }
+
+    .evasion img{
+        display:block;
+        max-width:50%;
+        margin:0 auto;
+    }
+
+    .evasion .bulb{
+        float:left;
+        position:absolute;
+        top:-30px;
+        left:20px;
+        transform: rotate(-14deg);
+        width:15%;
     }
 
 
