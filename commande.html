@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Commande</title>
-    <link rel="stylesheet" href="css/styleCommande.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Coming+Soon|Raleway" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -474,9 +474,9 @@
 
             <ul class="menuNavigation" id="menuNav">
                 <li><a href="legumes.html">Nos légumes</a></li>
-                <li><a href="#">Nos activités</a></li>
-                <li><a href="#">Nous découvrir</a></li>
-                <li><a href="#">Nous contacter</a></li>
+                <li><a href="activites.html">Nos activités</a></li>
+                <li><a href="decouvrir.html">Nous découvrir</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
                 <li><a href="#" id="orderNow">Commander <i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
@@ -532,7 +532,7 @@
             </div>
             <div class="panierL">
                
-                <img src="image/legumes.png" alt="légumes au choix" />
+                <img src="image/legumesP.png" alt="légumes au choix" />
                 <p><strong>À la carte</strong></p>
                 <img id="flechelegume"src="image/fleche.png" alt="fleche" />
                 
@@ -729,7 +729,7 @@
        
    -->     
         <div class="btn">
-            <input class="btn__link formBtn" type="button"  value="Commander" name="dsubmit" onclick="getCommande();" />
+            <a href="#" class="btn__link formBtn" value="Commander" name="dsubmit" onclick="getCommande();"><span class="texteBtn">Commander</span></a>
         </div>
 </form>
 
@@ -743,28 +743,30 @@
 
     <footer>
         <a href="#"><img src="image/arrow-up.png" alt="flèche pour remonter en haut de page" id="arrowup"></a>
+
         <div id="orgaFooter">
             <div id="perma">
                 <h4>Permanences</h4>
                 <p>Du lundi au vendredi<br> de 9h30 à 13h00
                     <br><span>OU</span><br>
-                    Sur <a href="#" id="rdv">rendez-vous</a></p>
+                    Sur <a href="#" class="footerLink">rendez-vous</a></p>
+            </div>
+            
+            <div class="bird"></div>
+
+            <div class="socialMedia">
+                <h4>Suivez-nous !</h4>
+                <a class ="footerLink" href="https://www.facebook.com/M%C3%A9l%C3%A9gumes-1118822338164204/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a class="footerLink" href="https://www.instagram.com/mel.egumes/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
-            <div class="fb-page" data-href="https://www.facebook.com/Mélégumes-1118822338164204/?epa=SEARCH_BOX"
-                data-width="250" data-height="300" data-small-header="false" data-adapt-container-width="true"
-                data-hide-cover="false" data-show-facepile="true"></div>
-
-            <div>
-                <div id="adresse">
-                    <h4>Adresse</h4>
-                    <p>Avenue de la joyeuse entrée, 23<br>7020 Nimy <br>0475/12.32.48<br><a
-                            href="mailto:melegumes@gmail.com" id="mail">melegumes@gmail.com</a></p>
-                </div>
+            <div id="adresse">
+                <h4>Adresse</h4>
+                <p>Avenue de la Joyeuse Entrée, 13<br>7020 Nimy <br>0474/47.46.73<br><a
+                        href="mailto:melanie-depaul@hotmail.com" class="footerLink">melanie-depaul@hotmail.com</a></p>
             </div>
-            <p id="copyright">Copyright Mél'égumes 2019 ©</p>
+            <p id="copyright">Copyright Mél'égumes 2019 © - <a href="legal.html" class="legalLink">Conditions d'utilisation du site web</a></p>
         </div>
-
     </footer>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
   <script>(function () {
