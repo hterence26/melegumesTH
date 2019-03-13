@@ -1249,6 +1249,25 @@ article li{
     margin: 0 auto;
 }
 
+.evasion .bulb{
+    display:block;
+    width:75%;
+}
+
+.evasion .proposerCollab{
+    width:80%;
+}
+
+.collabLink{
+    font-weight:bold;
+    text-decoration:none;
+    color:#E69237;
+}
+
+.collabLink:hover{
+    color:#0fa3a3;
+}
+
 #projets{
     background-image: url(../image/projets.jpg);
 }
