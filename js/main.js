@@ -1,3 +1,6 @@
+const log = console.log;
+const tab = console.table;
+
 $(document).ready(function(){
 
     $(window).scroll(function(){
