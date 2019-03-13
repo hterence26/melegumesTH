@@ -42,3 +42,28 @@ $(document).ready(function(){
             $("#blockceuillette").addClass("ssnav-active");
     });
  });
+
+ ///// Envoi du formulaire contact via le service "emailjs"
+var myform = $("form#contactForm");
+tab(myform);
+
+myform.submit(function(event){
+	event.preventDefault();
+
+  /*Change to your service ID, or keep using the default service*/
+  var service_id = "default_service";
+  var template_id = "template_jCuW7QDh";
+
+  myform.find("button").text("Envoi en cours...");
+  emailjs.sendForm(service_id,template_id,myform[0])
+  	.then(function(){ 
+    	alert("Votre message a bien été envoyé");
+       myform.find("button").text("Envoyer");
+       
+
+    }, function(err) {
+       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+       myform.find("button").text("Envoyer");
+    });
+  return false;
+});
