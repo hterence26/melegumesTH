@@ -1,9 +1,3 @@
-////////////////////////////////ES6
-const log = console.log;
-const tab = console.table;
-/* const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
- */
 
 // créer array Commande
 let prod = [
@@ -425,7 +419,7 @@ function getCommande() {
 	template_params = [
 		nameData, mailData, telData, depotData
 	];
-tab(template_params);
+
 
 
 	if (valCom == true) {
