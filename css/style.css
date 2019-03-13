@@ -1515,11 +1515,7 @@ article li{
         font-weight:bold;
     }
     
-    /*.legume strong {
-        font-size: 1.3em;
-        text-align: center;
-          }
-    */
+
     
     h3{
         font-family: 'Amatic SC', cursive;
@@ -1567,22 +1563,30 @@ article li{
         width:3em;
         height: 2em;
         vertical-align: middle;
+        border: 1px solid #005555;
+        border-radius: 4px;
+    font-size: 1em;
+    background: url('../image/panierI.png') transparent no-repeat left top;
+    background-size: 0.9em 0.9em;
+    background-position: 0.5em 0.5em;
+    padding : 0.1em 0.1em 0.1em 2em;
     }
     .legPanier button{
         border: none;    
-        background: transparent url(../image/panierI.png) no-repeat center;
-        color : #005555;
-        cursor:pointer;
-        width: 3em;
-        height: 3em;
-        vertical-align: middle;  
+    background: transparent url(../image/plusB2.png) no-repeat center;
+    cursor:pointer;
+    width: 2.2em;
+    height: 2.2em;
+    vertical-align: middle;  
+    border-radius : 4px;
     }
     
     .legPanier button:hover{
-        background: transparent url(../image/panierIb.png) no-repeat center;
+        background: transparent url(../image/plusB2H.png) no-repeat center;
+        
     }
     .legPanier button:active{
-        background: transparent url(../image/panierIb.png) right no-repeat;
+        background: transparent url(../image/plusB2A.png) right no-repeat;
         
     }
     
@@ -1621,6 +1625,11 @@ article li{
         padding-bottom: 12px;
         background-color: #0fa3a3;
         color: white;
+}
+
+#totalPanier{
+    width:80%;
+    text-align:center;
 }
 
 #totalPanier td {
