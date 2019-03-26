@@ -2534,16 +2534,8 @@ article li{
         background-position: 0 0;
     }
 
-    .btnClassic--decouvrir, .btnClassic--activites{
-        background-position-x: -2.2em;
-    }
-
     .btnClassic p{
         font-size:1.2em;
-    }
-
-    #mercure{
-        background-position-y: -3em;
     }
 
     .mercure{
@@ -2573,9 +2565,9 @@ article li{
 
     .informations{
         display:inline-block;
-        margin: 0;
+        margin: 10px;
         text-align: center;
-        width: 100%
+        top:0;
     }
 
     .infosleft{
